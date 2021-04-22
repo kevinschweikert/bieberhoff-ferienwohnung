@@ -12,8 +12,8 @@ module.exports = {
 			
 		},
 		fontFamily: {
-			'serif': ['"Courgette"'],
-			'sans': ['"Roboto Slab"']
+			'serif': ['Courgette', 'serif'],
+			'sans': ['"Roboto Slab"', 'Arial', 'Helvetica', 'sans-serif']
 		}
 	},
 	plugins: [],

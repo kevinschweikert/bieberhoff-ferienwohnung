@@ -5,7 +5,7 @@
 <div class="flex flex-col h-screen">
 	<nav class="fixed bg-bieber-grün w-full flex justify-between p-5 text-white">
 		<div>
-			<a href="/"><img class="h-20" src="src/lib/logo_white_text.png" alt="Logo" /></a>
+			<a href="/"><img class="h-20" src="/logo_white_text.png" alt="Logo" /></a>
 		</div>
 		<ul class="flex flex-row">
 			<li class="pr-5"><a href="/grosse-wohnung"> Große Wohnung </a></li>
