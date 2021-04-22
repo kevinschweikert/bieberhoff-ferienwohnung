@@ -1,4 +1,4 @@
-<h1 class="font-serif">Herzlich Willkommen</h1>
+<h1 class="font-serif text-5xl text-bieber-grün">Herzlich Willkommen</h1>
 <p class="font-sans p-5 m-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil consectetur incidunt voluptates voluptatum sunt aspernatur vitae. Exercitationem illo aliquid quos natus aut laboriosam, hic, adipisci iure, nemo voluptatem illum. Facere.</p>
 <p class="font-sans p-5 m-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil consectetur incidunt voluptates voluptatum sunt aspernatur vitae. Exercitationem illo aliquid quos natus aut laboriosam, hic, adipisci iure, nemo voluptatem illum. Facere.</p>
 <p class="font-sans p-5 m-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil consectetur incidunt voluptates voluptatum sunt aspernatur vitae. Exercitationem illo aliquid quos natus aut laboriosam, hic, adipisci iure, nemo voluptatem illum. Facere.</p>
