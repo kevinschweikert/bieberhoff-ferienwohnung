@@ -1,8 +1,7 @@
 <script>
     import { base, assets } from '$app/paths';
 
-    console.log(base)
-    console.log(assets)
+	export const prerender = true;
 </script>
 
 

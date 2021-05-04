@@ -1,5 +1,8 @@
 <script>
 	import '../app.postcss';
+
+	export const prerender = true;
+
 </script>
 
 <div class="flex flex-col h-screen">
