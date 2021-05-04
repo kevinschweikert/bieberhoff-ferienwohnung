@@ -3,7 +3,7 @@
 	export const hydrate = false;
 </script>
 
-<img src="/paralax_home.webp" class="w-screen h-auto" alt="Frau mit Pferd" />
+<img src="/paralax_home.webp" class="w-screen object-cover min-h-[200px]" alt="Frau mit Pferd" />
 
 <div class="md:w-[800px] mx-auto p-5">
 	<h1 class="font-serif text-5xl text-bieber-grün">Herzlich Willkommen</h1>
