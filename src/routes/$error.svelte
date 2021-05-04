@@ -1,5 +1,8 @@
-<h1 class="font-serif text-bieber-grün text-5xl mb-5">
-    Entschuldigung, Sie haben sich wohl verirrt.
-</h1>
+<div class="p-10 md:w-[800px] mx-auto">
 
-<a href="/"> Zurück zur Startseite</a>
+    <h1 class="font-serif text-bieber-grün text-3xl mb-5 ">
+        Entschuldigung, Sie haben sich wohl verirrt.
+    </h1>
+    
+    <a href="/"> Zurück zur Startseite</a>
+</div>
