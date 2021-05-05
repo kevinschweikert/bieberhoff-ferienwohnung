@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col h-screen">
-	<header class="fixed bg-bieber-grün w-full flex md:flex-row items-center flex-col justify-between p-5 text-white md:space-x-3">
+	<header class="md:fixed bg-bieber-grün w-full flex md:flex-row items-center flex-col justify-between p-5 text-white md:space-x-3">
 		<a href="/" class="flex-shrink-0"
 			><img class="h-[7rem] min-w-full" src="/logo_white_text.webp" alt="Bieberhoff Logo" />
 		</a>
@@ -17,7 +17,7 @@
 	</header>
 	
 
-	<div class=" mt-[14rem] md:mt-[9rem] flex-1">
+	<div class="md:mt-[9rem] flex-1">
 		<slot />
 	</div>
 
