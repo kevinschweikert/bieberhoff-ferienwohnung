@@ -1,4 +1,4 @@
-<script>
+<script context="module">
 	import '../app.postcss';
 
 	export const prerender = true;
