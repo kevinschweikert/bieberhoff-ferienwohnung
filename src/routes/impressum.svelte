@@ -9,7 +9,7 @@
 		<h2>Angaben gemäß §5 TMG</h2>
 
 		<p>
-            <span class="font-bold text-bieber-grün"> Anschrift</span> <br>
+			<span class="font-bold text-bieber-grün"> Anschrift</span> <br />
 			Matthias Bieber <br />
 			Blockhauser Weg 6 <br />
 			26605 Aurich
@@ -22,13 +22,13 @@
 		</p>
 
 		<p>
-			<span class="font-bold text-bieber-grün"> Kontakt</span> <br>
+			<span class="font-bold text-bieber-grün"> Kontakt</span> <br />
 			Telefon: 04941/9238414 <br />
 			E-Mail: info@bieberhoff.de
 		</p>
 
 		<p>
-			<span class="font-bold text-bieber-grün">Fotos</span> <br>
+			<span class="font-bold text-bieber-grün">Fotos</span> <br />
 			Birgit Cullmann <br />
 			Osterfeldstraße 3 <br />
 			26605 Aurich <br />
@@ -38,12 +38,12 @@
 		</p>
 
 		<p>
-			<span class="font-bold text-bieber-grün">Logo</span><br>
+			<span class="font-bold text-bieber-grün">Logo</span><br />
 			Andrea Rudolph
 		</p>
 
 		<p>
-			<span class="font-bold text-bieber-grün">Website</span><br>
+			<span class="font-bold text-bieber-grün">Website</span><br />
 			Kevin Schweikert
 		</p>
 	</section>
