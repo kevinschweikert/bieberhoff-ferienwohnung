@@ -3,12 +3,23 @@
 	export const hydrate = false;
 </script>
 
-<div class="md:w-[800px] mx-auto p-5">
-	<h1 class="font-serif text-5xl text-bieber-grün py-3">Kontakt</h1>
-	<section class="flex flex-col space-y-6">
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	a{
+		color: var(--bieber);
+	}
+</style>
+
+<div class="content">
+	<h1>Kontakt</h1>
+	<section>
 		<p>
 			Schreiben Sie uns eine Mail an: <br />
-			<a href="mailto:info@bieberhoff.de" class="underline text-bieber-grün p-3"
+			<a href="mailto:info@bieberhoff.de"
 				>info@bieberhoff.de</a
 			>
 		</p>

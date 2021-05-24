@@ -2,8 +2,8 @@
 	export const prerender = true;
 </script>
 
-<div class="md:w-[800px] mx-auto p-5">
-	<h1 class="font-serif text-5xl text-bieber-grün">Umgebung und Freizeitmöglichkeiten</h1>
+<div class="content">
+	<h1>Umgebung und Freizeitmöglichkeiten</h1>
 
 	<p>
 		Unser Bieberhoff liegt ländlich mit nur wenigen Nachbarhöfen und z.T. freier Sicht auf die

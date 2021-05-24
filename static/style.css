@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+	--bieber: rgb(30, 175, 18);
+	--akzent: #e2ba34;
+}
+
+html, body {
+	padding:  0;
+	margin:  0;
+	box-sizing: border-box;
+	font-family: "Roboto Slab", sans-serif;
+	width: 100vw;
+	height: 100vh;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#svelte {
+	min-height: 100vh;
+}
+
+p {
+	margin: 1rem;
+}
+
+h1, h2, h3, h4 , h5 {
+	font-family: "Courgette", serif;
+	color:  var(--bieber);
+}
+
+ul {
+	list-style-type: disc;
+	padding: 1rem;
+}
+
+.menuitem {
+	color:  white;
+	text-decoration: none;
+}
+
+.menuitem:hover {
+	text-decoration: underline;
+}
+
+.main {
+	margin-top: 0;
+}
+
+.content {
+	margin:  0 auto;
+	padding:  1.25rem;
+	width: 100vw;
+	box-sizing: border-box;
+}
+
+.hero {
+	width: 100vw;
+	object-fit: cover;
+	height: 200px;
+}
+
+
+@media (min-width:  768px) {
+	.content {
+		width: 800px;
+	}
+
+	.hero {
+		height: 300px;
+	}
+
+}

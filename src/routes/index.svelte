@@ -3,29 +3,23 @@
 	export const hydrate = false;
 </script>
 
-<img
-	src="/paralax_home.webp"
-	class="w-screen object-cover h-[200px] md:h-[300px]"
-	alt="Frau mit Pferd"
-/>
+<img src="/paralax_home.webp" class="hero" alt="Frau mit Pferd" />
 
-<div class="md:w-[800px] mx-auto p-5">
-	<h1 class="font-serif text-5xl text-bieber-grün">Herzlich Willkommen</h1>
+<div class="content">
+	<h1>Herzlich Willkommen</h1>
+	<div class="info">
+		<h2>Aktuelle Corona Maßnahmen</h2>
+		Noch nicht vollständig geimpfte oder genesene Gäste müssen <span
+			>bei Anreise und mindestens zweimal pro Woche</span
+		> einen negativen Test nachweisen.
+	</div>
+
 	<p>
 		Wir möchten Sie einladen, im Herzen Ostfrieslands Urlaub auf unserem Bieberhoff zu machen.
 		Derkleine Gulfhof, auf dem wir mit unseren 5 Pferden und vielen weiteren Tieren leben und
 		u.a.Reittherapie anbieten, liegt ländlich im Außenbereich von Aurich.
 	</p>
-	<p>
-		Wir bieten eine gerade fertig gestellte und liebevoll gestaltete Wohnung mit ca. 90 qm und
-		separatem Eingang an. Die gemütliche Wohnung ist flexibel nutzbar, etwa als Ganzes für eine
-		Familie mit mehreren Kindern oder auch geteilt mit einem großen Bereich für die Kleinfamilie und
-		einem weiteren Bereich für z.B. die Großeltern oder erwachsene Kinder.
-	</p>
-	<p>
-		Die Wohnung ist selbstverständlich mit allem ausgestattet, was man für einen bequemen und
-		erholsamen Urlaub braucht und zum großen Teil barrierefrei und rollstuhlgerecht.
-	</p>
+
 	<p>
 		Gern können Sie uns aktiv bei unserer Arbeit unterstützen oder uns auch nur über die Schulter
 		schauen, z.B. beim Füttern der Tiere oder anderen anfallenden Hofarbeiten wie Heuverteilung mit
@@ -61,3 +55,26 @@
 	 src="/emma_wiese.webp"
 	 alt="Junges Mädchen mit Pferd auf Wiese"
 	 /> -->
+
+<style>
+	span {
+		font-weight: bold;
+	}
+
+	.info {
+		color: white;
+		font-size: larger;
+		background-color: var(--bieber);
+		padding: 1rem;
+	}
+
+	h2 {
+		color:  white;
+	}
+
+	@media (min-width: 900px) {
+		img {
+			height: 40rem;
+		}
+	}
+</style>
