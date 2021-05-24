@@ -77,8 +77,8 @@
 
 	<ul class="linklist">
 		<li><a class="buttons" href="#komplette_wohnung"> Komplette Wohnung</a></li>
-		<li><a class="buttons" href="#kleine_wohnung"> Kleine Wohnung</a></li>
 		<li><a class="buttons" href="#große_wohnung"> Große Wohnung</a></li>
+		<li><a class="buttons" href="#kleine_wohnung"> Kleine Wohnung</a></li>
 	</ul>
 
 	<section id="komplette_wohnung">
