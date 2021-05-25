@@ -1,7 +1,5 @@
 <script context="module">
 	import Nav from '$lib/Nav.svelte';
-
-	export const prerender = true;
 </script>
 
 <div class="main">
@@ -10,7 +8,7 @@
 		<Nav />
 	</header>
 
-	<div class="main">
+	<div class="content">
 		<slot />
 	</div>
 

@@ -1,7 +1,3 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
 	export let images = [];
 </script>
@@ -16,20 +12,16 @@
 
 <style>
 	div {
-		display: flex;
-		flex-flow: row wrap;
-		gap: 0.5rem;
-		align-content: flex-end;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0.25rem;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
 
-	a {
-		width: calc((100% - 1rem)/3);
-	}
-
 	img {
 		width: 100%;
+		height:  100%;
 		aspect-ratio: 1;
 		object-fit: cover;
 	}
