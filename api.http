@@ -1,0 +1,14 @@
+POST http://localhost:3000/mail HTTP/1.1
+content-type: application/json
+
+{
+    "vorname": "Vorname",
+    "mail": "",
+    "nachname": "Nachname",
+    "start": "2021-05-24",
+    "ende": "2021-05-26",
+    "only": "Ja",
+    "kommentar": "Kommentar",
+    "wohnung": "Große Wohnung",
+    "anzahl": 5
+}
