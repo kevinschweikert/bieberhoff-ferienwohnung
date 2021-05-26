@@ -14,7 +14,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		padding:  1em;
+		padding:  0.5em;
 	}
 
 	@media (min-width:  768px) {
@@ -28,6 +28,6 @@
 		background-color: rgba(0, 0, 0, 0.1);
 		padding:  0.75rem;
 		border-radius: 0.5em;
-		margin: 0.25rem;
+		margin: 0.1rem;
 	}
 </style>

@@ -23,20 +23,58 @@
 <h1>Wohnungen</h1>
 
 <ul class="linklist">
-	<li class=link>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-		<a class="buttons" href="#komplette_wohnung"> Komplette Wohnung</a></li>
-	<li class=link>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-		<a class="buttons" href="#große_wohnung"> Große Wohnung</a></li>
-	<li class=link>
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-		<a class="buttons" href="#kleine_wohnung"> Kleine Wohnung</a></li>
+	<li class="link">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
+		>
+		<a class="buttons" href="#komplette_wohnung"> Komplette Wohnung</a>
+	</li>
+	<li class="link">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
+		>
+		<a class="buttons" href="#große_wohnung"> Große Wohnung</a>
+	</li>
+	<li class="link">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
+		>
+		<a class="buttons" href="#kleine_wohnung"> Kleine Wohnung</a>
+	</li>
 </ul>
 
 <section id="komplette_wohnung">
 	<h2>Komplette Wohnung</h2>
-	<img id="leader" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" />
+	<a href="/Begrüßung.webp"
+		><img id="leader" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" /></a
+	>
 	<p>
 		Wir bieten eine gerade fertig gestellte und liebevoll gestaltete Wohnung mit ca. 90 qm und
 		separatem Eingang an. Die gemütliche Wohnung ist flexibel nutzbar, etwa als Ganzes für eine
@@ -49,7 +87,9 @@
 
 <section id="große_wohnung">
 	<h2>Große Wohnung</h2>
-	<img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
+	<a href="/Gr_W_gesamt2.webp"
+		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
+	</a>
 	<ImageGrid images={grosse_wohnung} />
 	<h3>Ausstattung</h3>
 	<ul>
@@ -94,7 +134,9 @@
 
 <section id="kleine_wohnung">
 	<h2>Kleine Wohnung</h2>
-	<img class="test" src="/Kl_W_Schlafzimmer2.webp" alt="Übersicht komplette Wohnung" />
+	<a href="/Kl_W_Schlafzimmer2.webp">
+		<img class="test" src="/Kl_W_Schlafzimmer2.webp" alt="Übersicht komplette Wohnung" />
+	</a>
 	<ImageGrid images={kleine_wohnung} />
 	<h3>Ausstattung</h3>
 	<ul>
@@ -138,7 +180,7 @@
 
 <style>
 	svg {
-		color:  var(--akzent);
+		color: var(--akzent);
 	}
 
 	.link {

@@ -10,9 +10,9 @@
 	</p>
 
 	<p>
-		Steuernummer: 54/104/00115 <br />
+		Steuernummer:  <br />
 		Gewinnermittlung nach § 4 Abs. 3 EStG <br />
-		Bezeichnung des Betriebs: Reittherapie + Reitpädagogik
+		Bezeichnung des Betriebs: Bieberhoff Fereienwohnungen
 	</p>
 
 	<p>
