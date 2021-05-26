@@ -1,18 +1,17 @@
-
-<img src="/paralax_home.webp" class="hero full-width" alt="Frau mit Pferd" />
+<img src="/Gr_W_gesamt2.webp" class="hero full-width" alt="Frau mit Pferd" />
 
 <h1>Herzlich Willkommen</h1>
 
 <div class="info">
 	<h2>Aktuelle Corona Maßnahmen</h2>
-	Noch nicht vollständig geimpfte oder genesene Gäste müssen<span
-		>bei Anreise und mindestens zweimal pro Woche</span
-	> einen negativen Test nachweisen.
+	Noch nicht vollständig geimpfte oder genesene Gäste müssen
+	<span>bei Anreise und mindestens zweimal pro Woche</span> 
+	einen negativen Test nachweisen.
 </div>
 
 <p>
-	Wir möchten Sie einladen, im Herzen Ostfrieslands Urlaub auf unserem Bieberhoff zu machen.
-	Derkleine Gulfhof, auf dem wir mit unseren 5 Pferden und vielen weiteren Tieren leben und
+	Wir möchten Sie einladen, im Herzen Ostfrieslands Urlaub auf unserem Bieberhoff zu machen. Der
+	kleine Gulfhof, auf dem wir mit unseren 5 Pferden und vielen weiteren Tieren leben und
 	u.a.Reittherapie anbieten, liegt ländlich im Außenbereich von Aurich.
 </p>
 
@@ -27,18 +26,18 @@
 	z.B. mit Kickern oder Tischtennisspielen vertreiben. Natürlich dürfen auch unsere Tiere
 	gestreichelt, geputzt und verwöhnt werden:
 </p>
-<img src="/Marla.webp" class="full-width narrow" alt="schlafender Hund">
+<img src="/Marla.webp" class="narrow" alt="schlafender Hund" />
 <p>
-	das sind neben unserer Labradoodle-Hündin Marla und dem sehr alten Kater Karlchen unsere 2
+	Das sind neben unserer Labradoodle-Hündin Marla und dem sehr alten Kater Karlchen unsere 2
 	Kaninchen, 6 Hühner und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy. Nach
 	Absprache können außerdem unterschiedliche Angebote mit den Pferden gebucht werden.
 </p>
 <p>
-	Wir, die Familie Bieber freuen uns über alle Gäste und heißen besonders Familien herzlich
+	Wir, die Familie Bieber, freuen uns über alle Gäste und heißen besonders Familien herzlich
 	willkommen. Hier dürfen Kinder gern auch mal etwas wilder und lauter sein und auf Entdeckungstour
-	gehen ( .. während die Eltern sich hoffentlich entspannen können…). Wir beantworten geduldig alle
+	gehen (während die Eltern sich hoffentlich entspannen können). Wir beantworten geduldig alle
 	Fragen und lassen die Kinder gern bei unterschiedlichen Arbeiten helfen. Aber auch junge oder
-	ältere Paare; Freunde, Senioren oder allein Reisende sind gern gesehene Gäste. Wir möchten, dass
+	ältere Paare; Freunde, Senioren oder Allein-Reisende sind gern gesehene Gäste. Wir möchten, dass
 	Sie sich bei uns wohlfühlen und Ihren Urlaub, die kostbarste Zeit im Jahr, genießen können.
 	Deshalb sprechen Sie uns gern (frühzeitig) an, wenn etwas fehlt oder Ihnen nicht gefällt. Was
 	möglich ist, werden wir dann selbstverständlich ändern.
@@ -66,9 +65,7 @@
 
 	h2 {
 		color: white;
+		margin: 0.2em;
 	}
 
-	.narrow {
-		height: 20rem;
-	}
 </style>

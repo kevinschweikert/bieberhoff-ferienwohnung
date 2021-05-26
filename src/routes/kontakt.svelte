@@ -36,17 +36,17 @@
 			<input type="email" name="mail" id="mail" bind:value={mail} required />
 			<div class="row">
 				<div class="col">
-					<label for="komplett">Komplette Wohnung 90€/Nacht</label>
+					<label for="komplett">Komplette Wohnung</label>
 					<input type="radio" name="wohnung" id="komplett" value="Komplette Wohnung" required />
 				</div>
 
 				<div class="col">
-					<label for="groß">Große Wohnung 55€/Nacht</label>
+					<label for="groß">Große Wohnung</label>
 					<input type="radio" name="wohnung" id="groß" value="Große Wohnung" required />
 				</div>
 
 				<div class="col">
-					<label for="klein">Kleine Wohnung 35€/Nacht</label>
+					<label for="klein">Kleine Wohnung</label>
 					<input type="radio" name="wohnung" id="klein" value="Kleine Wohnung" required />
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 
 	div {
 		margin: 1em 0;
-		max-width: 500px;
+		max-width: 550px;
 	}
 
 	.row {
@@ -129,7 +129,7 @@
 		border-color: var(--akzent);
 		border-style: solid;
 		border-radius: 0.25em;
-		max-width: 500px;
+		max-width: 550px;
 		min-height: 2em;
 	}
 
