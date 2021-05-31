@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 :root {
-	--bieber: rgb(30, 175, 18);
+	--bieber: #6e6ece;
 	--akzent: #e2ba34;
 	--md: 768px;
 }
@@ -14,6 +14,7 @@ html, body {
 	font-family: "Roboto Slab", sans-serif;
 	width: 100vw;
 	height: 100vh;
+	line-height: 2rem;
 }
 
 *, *:before, *:after {
@@ -78,6 +79,13 @@ ul {
 		object-fit: cover;
 }
 
+.narrow {
+	height: 20rem;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0.5em;
+}
+
 
 @media (min-width:  768px) {
 	.content {
@@ -86,7 +94,5 @@ ul {
 
 	.hero {
 		height: 300px;
-
 	}
-
 }
