@@ -76,6 +76,7 @@
 	unbewohnt bleibt. In dem Fall käme ein Aufpreis von 10 € pro Nacht hinzu.
 </p>
 <h2>Betreute Angebote mit unseren Pferden:</h2>
+<img src="/auf_pferd.webp" alt="Menschen auf Pferd" id="down" class="narrow">
 <ul>
 	<li>
 		Wir bieten auf unserem Hof Reittherapie und pferdegestützte Trauma- und Erlebnispädagogik an
