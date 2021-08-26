@@ -8,19 +8,19 @@
 			price: 90,
 			size: 90,
 			persons: '4-6',
-			name: 'Komplette Wohnung'
+			name: 'Bieberburg'
 		},
 		{
 			price: 55,
 			size: 55,
 			persons: '2-3',
-			name: 'Große Wohnung'
+			name: 'Bieberbau'
 		},
 		{
 			price: 35,
 			size: 35,
 			persons: '2-3',
-			name: 'Kleine Wohnung'
+			name: 'Bieberhöhle'
 		}
 	];
 </script>
@@ -48,7 +48,7 @@
 
 <div class="umbau">
 	Durch noch laufende Umbauarbeiten auf dem Hof gibt es bei einer Buchung ab drei Nächten eine
-	zusätzliche Übernachtung gratis.
+	zusätzliche Übernachtung gratis. Dieses Angebot gilt bis <u>einschließlich 30. November 2021</u>.
 </div>
 
 {#each facts as fact}
@@ -60,6 +60,7 @@
 		20 €
 	</li>
 	<li>jede weitere Person 5 €/Nacht</li>
+	<li>Endreinigung zusätzlich 49€</li>
 </ul>
 
 <p>Die komplette Wohnung eignet sich z.B. gut für Familien mit mehreren Kindern.</p>
@@ -108,5 +109,8 @@
 
 	.umbau {
 		line-height: 200%;
+		background-color: var(--akzent);
+		padding: 0.75rem;
+		border-radius: 0.5em;
 	}
 </style>
