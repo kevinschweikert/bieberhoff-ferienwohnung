@@ -6,7 +6,7 @@
 </script>
 
 <div class="container">
-	<h2>{name}</h2>
+	<a href="/wohnungen#{name.toLowerCase()}"><h2>{name}</h2></a>
 	<div class="tabelle">
 		<div class="facts">
 			<span>{size} m²</span>
@@ -51,5 +51,9 @@
 		margin: 0;
 		font-weight: 200;
 		font-family: 'Roboto Slab', sans-serif;
+	}
+
+	a{
+		text-decoration: none;
 	}
 </style>

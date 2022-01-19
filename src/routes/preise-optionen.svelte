@@ -8,25 +8,24 @@
 			price: 90,
 			size: 90,
 			persons: '4-6',
-			name: 'Komplette Wohnung'
+			name: 'Bieberburg'
 		},
 		{
 			price: 55,
 			size: 55,
 			persons: '2-3',
-			name: 'Große Wohnung'
+			name: 'Bieberbau'
 		},
 		{
 			price: 35,
 			size: 35,
 			persons: '2-3',
-			name: 'Kleine Wohnung'
+			name: 'Bieberhöhle'
 		}
 	];
 </script>
 
 <h1>Preise und Mietoptionen</h1>
-
 
 {#each facts as fact}
 	<Price {...fact} />
@@ -37,6 +36,7 @@
 		20 €
 	</li>
 	<li>jede weitere Person 5 €/Nacht</li>
+	<li>Endreinigung zusätzlich 49€</li>
 </ul>
 
 <p>Die komplette Wohnung eignet sich z.B. gut für Familien mit mehreren Kindern.</p>
@@ -85,5 +85,8 @@
 
 	.umbau {
 		line-height: 200%;
+		background-color: var(--akzent);
+		padding: 0.75rem;
+		border-radius: 0.5em;
 	}
 </style>

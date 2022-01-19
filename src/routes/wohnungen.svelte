@@ -36,7 +36,7 @@
 			stroke-linejoin="round"
 			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
 		>
-		<a class="buttons" href="#komplette_wohnung"> Komplette Wohnung</a>
+		<a class="buttons" href="#bieberburg"> Bieberburg </a>
 	</li>
 	<li class="link">
 		<svg
@@ -51,7 +51,7 @@
 			stroke-linejoin="round"
 			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
 		>
-		<a class="buttons" href="#große_wohnung"> Große Wohnung</a>
+		<a class="buttons" href="#große_wohnung"> Bieberbau </a>
 	</li>
 	<li class="link">
 		<svg
@@ -66,12 +66,13 @@
 			stroke-linejoin="round"
 			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
 		>
-		<a class="buttons" href="#kleine_wohnung"> Kleine Wohnung</a>
+		<a class="buttons" href="#kleine_wohnung"> Bieberhöhle </a>
 	</li>
 </ul>
 
-<section id="komplette_wohnung">
-	<h2>Komplette Wohnung</h2>
+<section id="bieberburg">
+	<h2>Bieberburg</h2>
+	<h3>Komplette Wohnung</h3>
 	<a href="/Begrüßung.webp"
 		><img id="leader" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" /></a
 	>
@@ -85,8 +86,9 @@
 	</p>
 </section>
 
-<section id="große_wohnung">
+<section id="bieberbau">
 	<h2>Große Wohnung</h2>
+	<h3>Bieberbau</h3>
 	<a href="/Gr_W_gesamt2.webp"
 		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
 	</a>
@@ -123,17 +125,20 @@
 	<ul>
 		<li>Herd mit Backofen</li>
 		<li>Kühlschrank (ohne Eisfach)</li>
+		<li>kleiner Eisschrank</li>
 		<li>Spülmaschine</li>
 		<li>Mikrowelle</li>
 		<li>Kaffeemaschine, Wasserkocher</li>
 		<li>Toaster</li>
 		<li>Radio</li>
+		<li>Staubsauger</li>
 		<li>Hochstuhl möglich</li>
 	</ul>
 </section>
 
-<section id="kleine_wohnung">
+<section id="bieberhöhle">
 	<h2>Kleine Wohnung</h2>
+	<h3>Bieberhöhle</h3>
 	<a href="/Kl_W_Schlafzimmer2.webp">
 		<img class="test" src="/Kl_W_Schlafzimmer2.webp" alt="Übersicht komplette Wohnung" />
 	</a>
