@@ -4,9 +4,8 @@
 
 <div class="info">
 	<h2>Aktuelle Corona Maßnahmen</h2>
-	Noch nicht vollständig geimpfte oder genesene Gäste müssen
-	<span>bei Anreise und mindestens zweimal pro Woche</span> 
-	einen negativen Test nachweisen.
+  Bitte beachten Sie die aktuell geltenden Corona Maßnahmen im Bundesland Niedersachsen bzw. Kreis Aurich.
+  Aktuell gilt die 2G+ Regelung (negativer Test bei Anreise - 2x wöchentlich).
 </div>
 
 <p>
@@ -28,9 +27,7 @@
 </p>
 <img src="/Marla.webp" class="narrow" alt="schlafender Hund" />
 <p>
-	Das sind neben unserer Labradoodle-Hündin Marla und dem sehr alten Kater Karlchen unsere 2
-	Kaninchen, 6 Hühner und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy. Nach
-	Absprache können außerdem unterschiedliche Angebote mit den Pferden gebucht werden.
+	Das sind neben unserer Labradoodle-Hündin Marla unsere 2 Kaninchen, 6 Hühner, mehrere Nachbarskatzen und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy. Nach Absprache können außerdem unterschiedliche Angebote mit den Pferden gebucht werden.
 </p>
 <p>
 	Wir, die Familie Bieber, freuen uns über alle Gäste und heißen besonders Familien herzlich
@@ -51,9 +48,6 @@
 	 alt="Junges Mädchen mit Pferd auf Wiese"
 	 /> -->
 <style>
-	span {
-		font-weight: bold;
-	}
 
 	.info {
 		color: white;
