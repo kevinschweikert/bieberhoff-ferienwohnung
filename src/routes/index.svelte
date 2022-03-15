@@ -5,7 +5,6 @@
 <div class="info">
 	<h2>Aktuelle Corona Maßnahmen</h2>
   Bitte beachten Sie die aktuell geltenden Corona Maßnahmen im Bundesland Niedersachsen bzw. Kreis Aurich.
-  Aktuell gilt die 2G+ Regelung (negativer Test bei Anreise - 2x wöchentlich).
 </div>
 
 <p>
