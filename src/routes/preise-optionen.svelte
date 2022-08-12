@@ -8,19 +8,25 @@
 			price: 90,
 			size: 90,
 			persons: '4-6',
-			name: 'Bieberburg'
+			name: 'Bieberburg',
+			new_price: 110,
+			new_price_from: '01.01.2023'
 		},
 		{
 			price: 55,
 			size: 55,
 			persons: '2-3',
-			name: 'Bieberbau'
+			name: 'Bieberbau',
+			new_price: 70,
+			new_price_from: '01.01.2023'
 		},
 		{
 			price: 35,
 			size: 35,
 			persons: '2-3',
-			name: 'Bieberhöhle'
+			name: 'Bieberhöhle',
+			new_price: 45,
+			new_price_from: '01.01.2023'
 		}
 	];
 </script>
@@ -53,7 +59,7 @@
 	unbewohnt bleibt. In dem Fall käme ein Aufpreis von 10 € pro Nacht hinzu.
 </p>
 <h2>Betreute Angebote mit unseren Pferden:</h2>
-<img src="/auf_pferd.webp" alt="Menschen auf Pferd" id="down" class="narrow">
+<img src="/auf_pferd.webp" alt="Menschen auf Pferd" id="down" class="narrow" />
 <ul>
 	<li>
 		Wir bieten auf unserem Hof Reittherapie und pferdegestützte Trauma- und Erlebnispädagogik an
@@ -62,8 +68,8 @@
 	<li>Feriengäste erhalten auf diese Angebote 20% Ermäßigung.</li>
 	<li>
 		Alternativ haben wir für unsere Gastkinder (in Begleitung der Eltern) aber auch 30 Minuten
-		Pony-Zeit für 5 €. Dazu gehören etwa 10 Minuten Putzen und Versorgen, sowie ein kleiner
-		geführter Ritt von 20 Minuten. Dies betreut in der Regel unsere Tochter Vanessa (15).
+		Pony-Zeit für 6€. Dazu gehören etwa 10 Minuten Putzen und Versorgen, sowie ein kleiner geführter
+		Ritt von 20 Minuten. Dies betreut in der Regel unsere Tochter Vanessa (16).
 	</li>
 	<li>
 		Individuelle Angebote nach Absprache bietet unsere Tochter Emma (18) mit 50%iger Ermäßigung an.

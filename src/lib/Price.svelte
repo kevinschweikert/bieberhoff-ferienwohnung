@@ -3,6 +3,8 @@
 	export let price = 0;
 	export let size = 0;
 	export let persons = '';
+	export let new_price = false;
+	export let new_price_from = '';
 </script>
 
 <div class="container">
@@ -12,7 +14,12 @@
 			<span>{size} m²</span>
 			<span>für {persons} Personen</span>
 		</div>
-		<div class="price">{price} €/Nacht</div>
+		<div>
+			<div class="price">{price} €/Nacht</div>
+			{#if new_price}
+				<div>ab {new_price_from} - {new_price} €/Nacht</div>
+			{/if}
+		</div>
 	</div>
 </div>
 
@@ -42,7 +49,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		gap:  0.75rem;
+		gap: 0.75rem;
 	}
 
 	h2 {
@@ -53,7 +60,7 @@
 		font-family: 'Roboto Slab', sans-serif;
 	}
 
-	a{
+	a {
 		text-decoration: none;
 	}
 </style>
