@@ -5,21 +5,20 @@
 	const send = (e) => {
 		const formData = new FormData(e.target);
 		let json = Object.fromEntries(formData.entries());
-		
+
 		fetch('/mail', {
 			method: 'POST',
-			mode: "cors",
+			mode: 'cors',
 			cache: 'no-cache',
 			headers: {
-				'Content-Type': 'application/json',
+				'Content-Type': 'application/json'
 			},
 			redirect: 'follow',
-			body: JSON.stringify(json) 
+			body: JSON.stringify(json)
 		});
 
 		sent = true;
 	};
-
 </script>
 
 <h1>Kontakt</h1>
@@ -54,7 +53,7 @@
 			<input type="number" id="anzahl" name="anzahl" min="1" max="10" required />
 
 			<div>
-				<input type="checkbox" id="only" name="only" value="Ja"/>
+				<input type="checkbox" id="only" name="only" value="Ja" />
 				<label for="only"
 					>Ich möchte, dass während meines Aufenthaltes die andere Wohnung nicht belegt ist</label
 				>
@@ -148,5 +147,4 @@
 	input[type='radio'] {
 		margin: 1em;
 	}
-
 </style>

@@ -10,7 +10,7 @@
 	</p>
 
 	<p>
-		Steuernummer:  <br />
+		Steuernummer: <br />
 		Gewinnermittlung nach § 4 Abs. 3 EStG <br />
 		Bezeichnung des Betriebs: Bieberhoff Fereienwohnungen
 	</p>

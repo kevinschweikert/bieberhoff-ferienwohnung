@@ -1,4 +1,4 @@
-<img src="/bieberhoff.webp" alt="Bieberhoff Schild" class="full-width hero">
+<img src="/bieberhoff.webp" alt="Bieberhoff Schild" class="full-width hero" />
 
 <h1>Umgebung und Freizeitmöglichkeiten</h1>
 

@@ -9,24 +9,23 @@
 
 <style>
 	nav {
-		gap:  0.5rem;
+		gap: 0.5rem;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		align-items: center;
-		padding:  0.5em;
+		padding: 0.5em;
 	}
 
-	@media (min-width:  768px) {
+	@media (min-width: 768px) {
 		nav {
 			justify-content: flex-end;
 		}
-
-}
+	}
 
 	a {
 		background-color: rgba(0, 0, 0, 0.1);
-		padding:  0.75rem;
+		padding: 0.75rem;
 		border-radius: 0.5em;
 		margin: 0.1rem;
 	}

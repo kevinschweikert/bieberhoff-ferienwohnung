@@ -6,3 +6,4 @@ node_modules
 /functions
 .svelte-kit
 .env
+.vercel

@@ -1,6 +1,6 @@
 {
 	"name": "bieberhoff-ferienwohnung",
-	"version": "0.1",
+	"version": "1.02",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

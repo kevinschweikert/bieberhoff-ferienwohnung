@@ -31,7 +31,7 @@
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
-		padding:  1rem;
+		padding: 1rem;
 	}
 
 	@media (min-width: 768px) {
