@@ -20,6 +20,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Wohnungen</title>
+</svelte:head>
+
 <h1>Wohnungen</h1>
 
 <ul class="linklist">
@@ -51,7 +55,7 @@
 			stroke-linejoin="round"
 			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
 		>
-		<a class="buttons" href="#große_wohnung"> Bieberbau </a>
+		<a class="buttons" href="#bieberbau"> Bieberbau </a>
 	</li>
 	<li class="link">
 		<svg
@@ -66,7 +70,7 @@
 			stroke-linejoin="round"
 			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
 		>
-		<a class="buttons" href="#kleine_wohnung"> Bieberhöhle </a>
+		<a class="buttons" href="#bieberhöhle"> Bieberhöhle </a>
 	</li>
 </ul>
 

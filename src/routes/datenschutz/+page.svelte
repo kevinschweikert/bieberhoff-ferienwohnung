@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Datenschutz</title>
+</svelte:head>
+
 <h1>Datenschutz</h1>
 <section class="flex flex-col space-y-6">
 	<h2>1. Datenschutz auf einen Blick</h2>

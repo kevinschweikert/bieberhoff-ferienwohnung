@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Impressum</title>
+</svelte:head>
+
 <h1>Impressum</h1>
 <section>
 	<h2>Angaben gemäß §5 TMG</h2>

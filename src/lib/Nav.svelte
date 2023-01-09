@@ -1,10 +1,16 @@
 <nav>
-	<a class="menuitem" href="/">Startseite</a>
-	<a class="menuitem" href="/wohnungen">Wohnungen</a>
-	<a class="menuitem" href="/preise-optionen">Preise und Optionen</a>
-	<a class="menuitem" href="/umgebung"> Umgebung und Freizeit</a>
-	<a class="menuitem" href="/kontakt"> Kontakt</a>
-	<a class="menuitem" href="https://bieberhoff.de"> Reittherapie</a>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/">Startseite</a>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/wohnungen">Wohnungen</a>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/preise-optionen"
+		>Preise und Optionen</a
+	>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/umgebung">
+		Umgebung und Freizeit</a
+	>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/kontakt"> Kontakt</a>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="https://bieberhoff.de">
+		Reittherapie</a
+	>
 </nav>
 
 <style>

@@ -5,31 +5,29 @@
 <script>
 	const facts = [
 		{
-			price: 90,
+			price: 110,
 			size: 90,
 			persons: '4-6',
-			name: 'Bieberburg',
-			new_price: 110,
-			new_price_from: '01.01.2023'
+			name: 'Bieberburg'
 		},
 		{
-			price: 55,
+			price: 70,
 			size: 55,
 			persons: '2-3',
-			name: 'Bieberbau',
-			new_price: 70,
-			new_price_from: '01.01.2023'
+			name: 'Bieberbau'
 		},
 		{
-			price: 35,
+			price: 45,
 			size: 35,
 			persons: '2-3',
-			name: 'Bieberhöhle',
-			new_price: 45,
-			new_price_from: '01.01.2023'
+			name: 'Bieberhöhle'
 		}
 	];
 </script>
+
+<svelte:head>
+	<title>Preise + Optionen</title>
+</svelte:head>
 
 <h1>Preise und Mietoptionen</h1>
 
@@ -82,17 +80,3 @@
 		geritten wurden oder in der Therapie gearbeitet haben, ist selbstverständlich möglich.
 	</li>
 </ul>
-
-<style>
-	svg {
-		color: var(--akzent);
-		scale: 150%;
-	}
-
-	.umbau {
-		line-height: 200%;
-		background-color: var(--akzent);
-		padding: 0.75rem;
-		border-radius: 0.5em;
-	}
-</style>

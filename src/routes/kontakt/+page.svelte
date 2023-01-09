@@ -1,79 +1,104 @@
 <script>
-	let sent = false;
-	let mail = '';
+	import Error from '$lib/Error.svelte';
+	import Success from '$lib/Success.svelte';
 
-	const send = (e) => {
-		const formData = new FormData(e.target);
-		let json = Object.fromEntries(formData.entries());
-
-		fetch('/mail', {
-			method: 'POST',
-			mode: 'cors',
-			cache: 'no-cache',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			redirect: 'follow',
-			body: JSON.stringify(json)
-		});
-
-		sent = true;
-	};
+	/** @type {import('./$types').ActionData} */
+	export let form;
 </script>
+
+<svelte:head>
+	<title>Kontakt</title>
+</svelte:head>
 
 <h1>Kontakt</h1>
 <section>
-	{#if !sent}
-		<form action="#" on:submit|preventDefault={send}>
+	{#if form?.success}
+		<Success>
+			Danke für ihre Anfrage. Wir haben Ihnen eine Mail an <u>{form?.mail_address}</u> gesendet.
+		</Success>
+	{:else}
+		{#if form?.error}
+			<Error>
+				Entschuldigung! Ihre Anfrage konnte leider nicht gesendet werden. Versuchen Sie es bitte
+				noch einmal oder versuchen Sie uns, auf einen der unten stehenden Wegen zu kontaktieren.
+			</Error>
+		{/if}
+
+		<form method="POST">
 			<label for="vorname">Vorname</label>
-			<input type="text" name="vorname" id="vorname" required />
+			<input type="text" name="vorname" id="vorname" value={form?.vorname ?? ''} required />
 
 			<label for="nachname">Nachname</label>
-			<input type="text" name="nachname" id="nachname" />
+			<input type="text" name="nachname" id="nachname" value={form?.nachname ?? ''} />
 
 			<label for="mail">E-Mail</label>
-			<input type="email" name="mail" id="mail" bind:value={mail} required />
+			<input type="email" name="mail" id="mail" value={form?.mail_address ?? ''} required />
 			<div class="row">
 				<div class="col">
 					<label for="komplett">Komplette Wohnung</label>
-					<input type="radio" name="wohnung" id="komplett" value="Komplette Wohnung" required />
+					<input
+						type="radio"
+						name="wohnung"
+						id="komplett"
+						value="Komplette Wohnung"
+						checked={form?.wohnung == 'Komplette Wohnung'}
+						required
+					/>
 				</div>
 
 				<div class="col">
 					<label for="groß">Große Wohnung</label>
-					<input type="radio" name="wohnung" id="groß" value="Große Wohnung" required />
+					<input
+						type="radio"
+						name="wohnung"
+						id="groß"
+						value="Große Wohnung"
+						checked={form?.wohnung == 'Große Wohnung'}
+						required
+					/>
 				</div>
 
 				<div class="col">
 					<label for="klein">Kleine Wohnung</label>
-					<input type="radio" name="wohnung" id="klein" value="Kleine Wohnung" required />
+					<input
+						type="radio"
+						name="wohnung"
+						id="klein"
+						value="Kleine Wohnung"
+						checked={form?.wohnung == 'Kleine Wohnung'}
+						required
+					/>
 				</div>
 			</div>
 			<label for="anzahl">Personenanzahl</label>
-			<input type="number" id="anzahl" name="anzahl" min="1" max="10" required />
+			<input
+				type="number"
+				id="anzahl"
+				name="anzahl"
+				value={form?.anzahl ?? ''}
+				min="1"
+				max="10"
+				required
+			/>
 
 			<div>
-				<input type="checkbox" id="only" name="only" value="Ja" />
+				<input type="checkbox" id="only" name="only" value="Ja" checked={form?.allein == 'Ja'} />
 				<label for="only"
 					>Ich möchte, dass während meines Aufenthaltes die andere Wohnung nicht belegt ist</label
 				>
 			</div>
 
 			<label for="start">Von</label>
-			<input type="date" name="start" id="start" required />
+			<input type="date" name="start" id="start" value={form?.start ?? ''} required />
 
 			<label for="ende">Bis</label>
-			<input type="date" name="ende" id="ende" required />
+			<input type="date" name="ende" id="ende" value={form?.ende ?? ''} required />
 
 			<label for="kommentar">Kommentar</label>
-			<textarea rows="5" name="kommentar" id="kommentar" />
+			<textarea rows="5" name="kommentar" id="kommentar" value={form?.kommentar ?? ''} />
 
 			<input type="submit" value="Anfrage senden" />
 		</form>
-	{:else}
-		<div class="confirm">
-			Danke für ihre Anfrage. Wir haben Ihnen eine Mail an <span>{mail}</span> gesendet.
-		</div>
 	{/if}
 	<hr />
 	<p>
