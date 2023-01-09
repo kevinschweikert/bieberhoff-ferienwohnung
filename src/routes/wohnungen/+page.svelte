@@ -20,6 +20,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Wohnungen</title>
+</svelte:head>
+
 <h1>Wohnungen</h1>
 
 <ul class="linklist">

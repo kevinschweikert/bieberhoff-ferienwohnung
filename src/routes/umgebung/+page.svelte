@@ -1,3 +1,6 @@
+<svelte:head>
+	<title>Umgebung</title>
+</svelte:head>
 <img src="/bieberhoff.webp" alt="Bieberhoff Schild" class="full-width hero" />
 
 <h1>Umgebung und Freizeitmöglichkeiten</h1>

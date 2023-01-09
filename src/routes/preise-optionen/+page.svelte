@@ -25,6 +25,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Preise + Optionen</title>
+</svelte:head>
+
 <h1>Preise und Mietoptionen</h1>
 
 {#each facts as fact}

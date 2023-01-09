@@ -6,6 +6,10 @@
 	export let form;
 </script>
 
+<svelte:head>
+	<title>Kontakt</title>
+</svelte:head>
+
 <h1>Kontakt</h1>
 <section>
 	{#if form?.success}
