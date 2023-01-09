@@ -73,7 +73,10 @@ export const actions = {
 		});
 
 
-		if (response.status != 200) {
+		if (response.status != 202) {
+			response.errors.forEach(eroro => {
+				console.debug(error)
+			});
 			return fail(500, { vorname, nachname, mail_address, anzahl, wohnung, allein, start, ende, kommentar, error: true })
 		}
 
