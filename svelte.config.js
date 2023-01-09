@@ -12,10 +12,6 @@ const config = {
 		prerender: {
 			crawl: true,
 		},
-		browser: {
-
-			router: false
-		}
 	}
 
 };
