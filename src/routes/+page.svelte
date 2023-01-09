@@ -2,11 +2,6 @@
 
 <h1>Herzlich Willkommen</h1>
 
-<div class="info">
-	<h2>Aktuelle Corona Maßnahmen</h2>
-	Bitte beachten Sie die aktuell geltenden Corona Maßnahmen im Bundesland Niedersachsen bzw. Kreis Aurich.
-</div>
-
 <p>
 	Wir möchten Sie einladen, im Herzen Ostfrieslands Urlaub auf unserem Bieberhoff zu machen. Der
 	kleine Gulfhof, auf dem wir mit unseren 5 Pferden und vielen weiteren Tieren leben und
@@ -42,23 +37,3 @@
 </p>
 <p>Wir freuen uns auf Sie!</p>
 <p>Familie Bieber</p>
-
-<!-- <img
-	 class="h-[300px] w-screen object-cover"
-	 src="/emma_wiese.webp"
-	 alt="Junges Mädchen mit Pferd auf Wiese"
-	 /> -->
-<style>
-	.info {
-		color: white;
-		font-size: larger;
-		background-color: var(--bieber);
-		padding: 1rem;
-		border-radius: 0.5rem;
-	}
-
-	h2 {
-		color: white;
-		margin: 0.2em;
-	}
-</style>
