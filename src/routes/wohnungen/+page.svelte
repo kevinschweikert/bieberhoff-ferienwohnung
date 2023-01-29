@@ -38,7 +38,12 @@
 	<title>Wohnungen</title>
 </svelte:head>
 
-<img class="hero full-width" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" />
+<img
+	class="hero full-width"
+	style="width: 100vw"
+	src="/Begrüßung.webp"
+	alt="Übersicht komplette Wohnung"
+/>
 <h1>Wohnungsoptionen</h1>
 
 <section id="bieberburg">
@@ -240,5 +245,6 @@
 
 	img {
 		width: 100%;
+		border-radius: 0.5em;
 	}
 </style>
