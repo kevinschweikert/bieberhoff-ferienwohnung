@@ -5,22 +5,22 @@ export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 
-		const vorname = data.get('vorname')
-		const nachname = data.get('nachname')
-		const mail_address = data.get('mail')
-		const wohnung = data.get('wohnung')
-		const anzahl = data.get('anzahl')
-		const allein = data.get('only')
-		const start = data.get('start')
-		const ende = data.get('ende')
-		const kommentar = data.get('kommentar')
+		const vorname = data.get('vorname');
+		const nachname = data.get('nachname');
+		const mail_address = data.get('mail');
+		const wohnung = data.get('wohnung');
+		const anzahl = data.get('anzahl');
+		const allein = data.get('only');
+		const start = data.get('start');
+		const ende = data.get('ende');
+		const kommentar = data.get('kommentar');
 
 		const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
 		const von = new Date(start);
 		const bis = new Date(ende);
 
-		let only = allein != 'Ja' ? 'Nein' : allein
+		let only = allein != 'Ja' ? 'Nein' : allein;
 
 		let mail = {
 			from: {
@@ -57,8 +57,6 @@ export const actions = {
 			template_id: `${import.meta.env.VITE_SENDGRID_TEMPLATE_ID}`
 		};
 
-
-
 		const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
 			method: 'POST', // *GET, POST, PUT, DELETE, etc.
 			mode: 'cors', // no-cors, *cors, same-origin
@@ -72,14 +70,24 @@ export const actions = {
 			body: JSON.stringify(mail) // body data type must match "Content-Type" header
 		});
 
-
 		if (response.status != 202) {
-			response.errors.forEach(eroro => {
-				console.debug(error)
+			response.errors.forEach((eroro) => {
+				console.debug(error);
 			});
-			return fail(500, { vorname, nachname, mail_address, anzahl, wohnung, allein, start, ende, kommentar, error: true })
+			return fail(500, {
+				vorname,
+				nachname,
+				mail_address,
+				anzahl,
+				wohnung,
+				allein,
+				start,
+				ende,
+				kommentar,
+				error: true
+			});
 		}
 
 		return { success: true, mail_address };
 	}
-}
+};
