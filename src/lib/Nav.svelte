@@ -1,6 +1,6 @@
 <nav>
 	<a class="menuitem" data-sveltekit-preload-data="hover" href="/">Startseite</a>
-	<a class="menuitem" data-sveltekit-preload-data="hover" href="/wohnungen">Wohnungen</a>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/wohnungen">Wohnungsoptionen</a>
 	<a class="menuitem" data-sveltekit-preload-data="hover" href="/preise-optionen"
 		>Preise und Optionen</a
 	>

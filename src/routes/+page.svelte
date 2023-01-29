@@ -21,9 +21,9 @@
 </p>
 <img src="/Marla.webp" class="narrow" alt="schlafender Hund" />
 <p>
-	Das sind neben unserer Labradoodle-Hündin Marla unsere 3 Kaninchen, 6 Hühner, 2 Katzen, 2 Schafe
-	und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy. Nach Absprache können außerdem
-	unterschiedliche Angebote mit den Pferden gebucht werden.
+	Das sind neben unserer Labradoodle-Hündin Marla unsere 3 Kaninchen, 6 Hühner, 2 Kater (Emil und
+	Wotan), 2 Schafe (Billy und Bob) und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy.
+	Nach Absprache können außerdem unterschiedliche Angebote mit den Pferden gebucht werden.
 </p>
 <p>
 	Wir, die Familie Bieber, freuen uns über alle Gäste und heißen besonders Familien herzlich

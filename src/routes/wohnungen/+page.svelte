@@ -1,6 +1,20 @@
 <script context="module">
 	import ImageGrid from '$lib/ImageGrid.svelte';
 
+	let ganze_wohnung = [
+		'Gr_W_EssbereichKueche.webp',
+		'Gr_W_Esstisch.webp',
+		'Gr_W_Schlafzimmer.webp',
+		'Gr_W_Kuschelecke.webp',
+		'Gr_W_Bad.webp',
+		'Gr_W_Dusche.webp',
+		'Kl_W_Wohnzimmer2.webp',
+		'Kl_W_Schlafzimmer.webp',
+		'Kl_W_Wohnzimmer1.webp',
+		'Kl_W_Essen.webp',
+		'Kl_W_Bad.webp',
+		'Kl_W_Dusche.webp'
+	];
 	let grosse_wohnung = [
 		'Gr_W_EssbereichKueche.webp',
 		'Gr_W_Esstisch.webp',
@@ -24,75 +38,92 @@
 	<title>Wohnungen</title>
 </svelte:head>
 
-<h1>Wohnungen</h1>
-
-<ul class="linklist">
-	<li class="link">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
-		>
-		<a class="buttons" href="#bieberburg"> Bieberburg </a>
-	</li>
-	<li class="link">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
-		>
-		<a class="buttons" href="#bieberbau"> Bieberbau </a>
-	</li>
-	<li class="link">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6" /></svg
-		>
-		<a class="buttons" href="#bieberhöhle"> Bieberhöhle </a>
-	</li>
-</ul>
+<img class="hero full-width" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" />
+<h1>Wohnungsoptionen</h1>
 
 <section id="bieberburg">
-	<h2>Bieberburg</h2>
-	<h3>Komplette Wohnung</h3>
-	<a href="/Begrüßung.webp"
-		><img id="leader" src="/Begrüßung.webp" alt="Übersicht komplette Wohnung" /></a
-	>
+	<h3>Bieberburg (90 m<sup>2</sup>)</h3>
 	<p>
-		Wir bieten eine gerade fertig gestellte und liebevoll gestaltete Wohnung mit ca. 90 qm und
-		separatem Eingang an. Die gemütliche Wohnung ist flexibel nutzbar, etwa als Ganzes für eine
-		Familie mit mehreren Kindern oder auch geteilt mit einem großen Bereich für die Kleinfamilie und
-		einem weiteren Bereich für z.B. die Großeltern oder erwachsene Kinder. Die Wohnung ist
+		Wir bieten eine liebevoll gestaltete Wohnung mit ca. 90 qm und separatem Eingang an. Sie ist
 		selbstverständlich mit allem ausgestattet, was man für einen bequemen und erholsamen Urlaub
 		braucht und zum großen Teil barrierefrei und rollstuhlgerecht.
 	</p>
+
+	<a href="/Gr_W_gesamt2.webp"
+		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
+	</a>
+	<ImageGrid images={ganze_wohnung} />
+	<h3>Ausstattung</h3>
+	<ul>
+		<li>W-Lan</li>
+		<li>Möbliert</li>
+		<li>Voll ausgestattete Küche</li>
+		<li>2 Bäder</li>
+		<li>2 TV-Geräte</li>
+		<li>Nichtraucher</li>
+		<li>Fußbodenheizung</li>
+		<li>Parkplatz</li>
+	</ul>
+
+	<h3>Beschreibung</h3>
+	<ul>
+		<li>Ca. 90 qm-Erdgeschosswohnung für 4 bis 6 Personen (zusätzliches Kinderbett ist möglich)</li>
+		<li>2 separate Eingänge</li>
+		<li>Separates Schlafzimmer mit 2 Betten (einzeln oder zusammen geschoben)</li>
+		<li>Schlafempore mit Doppelbett (160 cm x 200 cm)</li>
+		<li>
+			Großer Wohn-Essbereich mit integrierter voll ausgestatteter Küche und Sat-TV (mit Schlafsofa
+			(140 cm x 200 cm) in separater Ecke
+		</li>
+		<li>
+			Weiterer offener Wohnzimmer-Bereich mit zusätzlichem Schlafsofa (140cm x 200cm) und einem
+			weiteren TV
+		</li>
+		<li>Großes barrierefreies Duschbad mit Handtuchheizkörper, Fön</li>
+		<li>Kleines Duschbad mit Handtuchheizkörper</li>
+		<li>Fußbodenheizung</li>
+		<li>Wohnung barrierefrei (rollstuhlgerecht) mit 2 separaten Eingängen</li>
+		<li>Zusätzliches Kinderbett möglich</li>
+		<li>Spiele-Kiste für Kinder</li>
+		<li>1. Hilfe-Set</li>
+		<li>Haustier (Hund) nach Absprache u.U. möglich</li>
+		<li>Waschmaschinen- und Trocknernutzung möglich</li>
+	</ul>
+
+	<h3>Küche</h3>
+	<ul>
+		<li>Herd mit Backofen</li>
+		<li>Kühlschrank (mit Eisfach)</li>
+		<li>Spülmaschine</li>
+		<li>Mikrowelle</li>
+		<li>Kaffeemaschine, Wasserkocher</li>
+		<li>Toaster</li>
+		<li>Radio</li>
+		<li>Staubsauger</li>
+		<li>Hochstuhl möglich</li>
+	</ul>
+
+	<p>
+		Die Wohnung ist flexibel nutzbar, weil sie sich bei Bedarf auch in zwei (<a href="#bieberbau"
+			>Bieberbau</a
+		>
+		und <a href="#bieberhöhle">Bieberhöhle</a>), in sich abgeschlossene Bereiche mit jeweils
+		separatem Eingang und eigenem Bad aufteilen lässt. Daher eignet sie sich gut für Familien mit
+		mehreren Kindern, aber auch z.B. für befreundete Paare oder Kleinfamilien, für mitreisende
+		Großeltern oder erwachsene Kinder.
+	</p>
+	<p>
+		So kann man gemeinsam Urlaub machen und ist doch unabhängig. Man kann sich mal zurückziehen und
+		hat seine Privatsphäre.
+	</p>
+	<p>
+		Die Wohnungen liegen Wand an Wand, insofern gibt es natürlich keinen kompletten Schallschutz.
+	</p>
+	<p>Aufgeteilt sind die beiden Wohnhälften folgendermaßen ausgestattet:</p>
 </section>
 
 <section id="bieberbau">
-	<h2>Große Wohnung</h2>
-	<h3>Bieberbau</h3>
+	<h3>Bieberbau (55 m<sup>2</sup>)</h3>
 	<a href="/Gr_W_gesamt2.webp"
 		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
 	</a>
@@ -120,6 +151,7 @@
 		<li>Fußbodenheizung</li>
 		<li>Wohnung barrierefrei (rollstuhlgerecht) mit separatem Eingang</li>
 		<li>Zusätzliches Kinderbett möglich</li>
+		<li>Spiele-Kiste für Kinder</li>
 		<li>1. Hilfe-Set</li>
 		<li>Haustier nach Absprache u.U. möglich</li>
 		<li>Waschmaschinen- und Trocknernutzung möglich</li>
@@ -141,8 +173,7 @@
 </section>
 
 <section id="bieberhöhle">
-	<h2>Kleine Wohnung</h2>
-	<h3>Bieberhöhle</h3>
+	<h3>Bieberhöhle (35 m<sup>2</sup>)</h3>
 	<a href="/Kl_W_Schlafzimmer2.webp">
 		<img class="test" src="/Kl_W_Schlafzimmer2.webp" alt="Übersicht komplette Wohnung" />
 	</a>
@@ -188,21 +219,6 @@
 </section>
 
 <style>
-	svg {
-		color: var(--akzent);
-	}
-
-	.link {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-
-	.buttons {
-		font-size: 1rem;
-	}
-
-	h2,
 	h3,
 	a {
 		color: var(--bieber);
@@ -210,13 +226,6 @@
 
 	a {
 		text-decoration: underline;
-	}
-
-	h2 {
-		font-family: 'Courgette';
-		font-weight: 700;
-		font-size: 2rem;
-		margin-top: 2rem;
 	}
 
 	h3 {
@@ -227,17 +236,6 @@
 
 	section {
 		width: 100%;
-	}
-
-	.linklist {
-		line-height: 2.5rem;
-		list-style: none;
-	}
-
-	#leader {
-		object-fit: cover;
-		width: 100%;
-		height: 10rem;
 	}
 
 	img {
