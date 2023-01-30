@@ -289,8 +289,8 @@
 		background-color: var(--bieber);
 		color: white;
 		padding: 2rem;
-		padding-left: 10rem;
-		padding-right: 10rem;
+		padding-left: 10vw;
+		padding-right: 10vw;
 	}
 
 	.info a {
