@@ -1,11 +1,30 @@
 <script>
+	import { onMount } from 'svelte';
+	import PhotoSwipeLightbox from 'photoswipe/lightbox';
+	export let gallery_id;
 	export let images = [];
+
+	onMount(() => {
+		let lightbox = new PhotoSwipeLightbox({
+			gallery: '#' + gallery_id,
+			children: 'a',
+			pswpModule: () => import('photoswipe')
+		});
+		lightbox.init();
+	});
 </script>
 
-<div>
+<div class="pswp-gallery" id={gallery_id}>
 	{#each images as image}
-		<a href="/{image}">
-			<img src="/{image}" alt={image} />
+		<a
+			href={image.src}
+			data-pswp-width={image.width}
+			data-pswp-height={image.height}
+			data-cropped="true"
+			target="_blank"
+			rel="noreferrer"
+		>
+			<img loading="lazy" src={image.thumbnail} alt="" />
 		</a>
 	{/each}
 </div>

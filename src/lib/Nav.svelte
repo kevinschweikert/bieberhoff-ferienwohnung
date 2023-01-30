@@ -7,6 +7,7 @@
 	<a class="menuitem" data-sveltekit-preload-data="hover" href="/umgebung">
 		Umgebung und Freizeit</a
 	>
+	<a class="menuitem" data-sveltekit-preload-data="hover" href="/fotos">Fotos</a>
 	<a class="menuitem" data-sveltekit-preload-data="hover" href="/kontakt"> Kontakt</a>
 	<a class="menuitem" data-sveltekit-preload-data="hover" href="https://bieberhoff.de">
 		Reittherapie</a
