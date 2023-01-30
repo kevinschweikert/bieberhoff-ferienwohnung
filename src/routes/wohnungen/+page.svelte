@@ -1,49 +1,83 @@
 <script context="module">
 	import ImageGrid from '$lib/ImageGrid.svelte';
 
-	let ganze_wohnung = [
-		'Gr_W_EssbereichKueche.webp',
-		'Gr_W_Esstisch.webp',
-		'Gr_W_Schlafzimmer.webp',
-		'Gr_W_Kuschelecke.webp',
-		'Gr_W_Bad.webp',
-		'Gr_W_Dusche.webp',
-		'Kl_W_Wohnzimmer2.webp',
-		'Kl_W_Schlafzimmer.webp',
-		'Kl_W_Wohnzimmer1.webp',
-		'Kl_W_Essen.webp',
-		'Kl_W_Bad.webp',
-		'Kl_W_Dusche.webp'
-	];
-	let grosse_wohnung = [
-		'Gr_W_EssbereichKueche.webp',
-		'Gr_W_Esstisch.webp',
-		'Gr_W_Schlafzimmer.webp',
-		'Gr_W_Kuschelecke.webp',
-		'Gr_W_Bad.webp',
-		'Gr_W_Dusche.webp'
-	];
+	import header from '../../../src/images/Begrüßung.webp';
+	import ganze_wohnung_header from '../../../src/images/grosse_wohnung/Gr_W_gesamt2.webp';
+	import grosse_wohnung_header from '../../../src/images/grosse_wohnung/Gr_W_gesamt.webp';
+	import kleine_wohnung_header from '../../../src/images/kleine_wohnung/Kl_W_Schlafzimmer2.webp';
 
-	let kleine_wohnung = [
-		'Kl_W_Wohnzimmer2.webp',
-		'Kl_W_Schlafzimmer.webp',
-		'Kl_W_Wohnzimmer1.webp',
-		'Kl_W_Essen.webp',
-		'Kl_W_Bad.webp',
-		'Kl_W_Dusche.webp'
-	];
+	const ganze_wohnung_import = import.meta.glob(
+		'../../images/{grosse_wohnung,kleine_wohnung}/*.webp',
+		{
+			query: {
+				width: '300;1200',
+				picture: '',
+				flatten: '',
+				meta: true
+			},
+			import: 'default',
+			eager: true
+		}
+	);
+	const grosse_wohnung_import = import.meta.glob('../../images/grosse_wohnung/*.webp', {
+		query: {
+			width: '300;1200',
+			picture: '',
+			flatten: '',
+			meta: true
+		},
+		import: 'default',
+		eager: true
+	});
+	const kleine_wohnung_import = import.meta.glob('../../images/kleine_wohnung/*.webp', {
+		query: {
+			width: '300;1200',
+			picture: '',
+			flatten: '',
+			meta: true
+		},
+		import: 'default',
+		eager: true
+	});
+
+	let ganze_wohnung = [];
+	let grosse_wohnung = [];
+	let kleine_wohnung = [];
+
+	for (const path in ganze_wohnung_import) {
+		let image = ganze_wohnung_import[path];
+		ganze_wohnung.push({
+			width: image.fallback.w,
+			height: image.fallback.h,
+			src: image.sources.webp[1].src,
+			thumbnail: image.sources.webp[0].src
+		});
+	}
+	for (const path in grosse_wohnung_import) {
+		let image = grosse_wohnung_import[path];
+		grosse_wohnung.push({
+			width: image.fallback.w,
+			height: image.fallback.h,
+			src: image.sources.webp[1].src,
+			thumbnail: image.sources.webp[0].src
+		});
+	}
+	for (const path in kleine_wohnung_import) {
+		let image = kleine_wohnung_import[path];
+		kleine_wohnung.push({
+			width: image.fallback.w,
+			height: image.fallback.h,
+			src: image.sources.webp[1].src,
+			thumbnail: image.sources.webp[0].src
+		});
+	}
 </script>
 
 <svelte:head>
 	<title>Wohnungen</title>
 </svelte:head>
 
-<img
-	class="hero full-width"
-	style="width: 100vw"
-	src="/Begrüßung.webp"
-	alt="Übersicht komplette Wohnung"
-/>
+<img class="hero full-width" style="width: 100vw" src={header} alt="Übersicht komplette Wohnung" />
 <h1>Wohnungsoptionen</h1>
 
 <section id="bieberburg">
@@ -54,10 +88,10 @@
 		braucht und zum großen Teil barrierefrei und rollstuhlgerecht.
 	</p>
 
-	<a href="/Gr_W_gesamt2.webp"
-		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
+	<a href={ganze_wohnung_header}
+		><img src={ganze_wohnung_header} alt="Übersicht komplette Wohnung" />
 	</a>
-	<ImageGrid images={ganze_wohnung} />
+	<ImageGrid images={ganze_wohnung} gallery_id="ganze_wohnung" />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -107,32 +141,35 @@
 		<li>Staubsauger</li>
 		<li>Hochstuhl möglich</li>
 	</ul>
+	<div class="full-width info">
+		<h3 style="color: white">Tipp</h3>
 
-	<p>
-		Die Wohnung ist flexibel nutzbar, weil sie sich bei Bedarf auch in zwei (<a href="#bieberbau"
-			>Bieberbau</a
-		>
-		und <a href="#bieberhöhle">Bieberhöhle</a>), in sich abgeschlossene Bereiche mit jeweils
-		separatem Eingang und eigenem Bad aufteilen lässt. Daher eignet sie sich gut für Familien mit
-		mehreren Kindern, aber auch z.B. für befreundete Paare oder Kleinfamilien, für mitreisende
-		Großeltern oder erwachsene Kinder.
-	</p>
-	<p>
-		So kann man gemeinsam Urlaub machen und ist doch unabhängig. Man kann sich mal zurückziehen und
-		hat seine Privatsphäre.
-	</p>
-	<p>
-		Die Wohnungen liegen Wand an Wand, insofern gibt es natürlich keinen kompletten Schallschutz.
-	</p>
-	<p>Aufgeteilt sind die beiden Wohnhälften folgendermaßen ausgestattet:</p>
+		<p>
+			Die Wohnung ist flexibel nutzbar, weil sie sich bei Bedarf auch in zwei (<a href="#bieberbau"
+				>Bieberbau</a
+			>
+			und <a href="#bieberhöhle">Bieberhöhle</a>), in sich abgeschlossene Bereiche mit jeweils
+			separatem Eingang und eigenem Bad aufteilen lässt. Daher eignet sie sich gut für Familien mit
+			mehreren Kindern, aber auch z.B. für befreundete Paare oder Kleinfamilien, für mitreisende
+			Großeltern oder erwachsene Kinder.
+		</p>
+		<p>
+			So kann man gemeinsam Urlaub machen und ist doch unabhängig. Man kann sich mal zurückziehen
+			und hat seine Privatsphäre.
+		</p>
+		<p>
+			Die Wohnungen liegen Wand an Wand, insofern gibt es natürlich keinen kompletten Schallschutz.
+		</p>
+		<p>Aufgeteilt sind die beiden Wohnhälften folgendermaßen ausgestattet:</p>
+	</div>
 </section>
 
 <section id="bieberbau">
 	<h3>Bieberbau (55 m<sup>2</sup>)</h3>
-	<a href="/Gr_W_gesamt2.webp"
-		><img src="/Gr_W_gesamt2.webp" alt="Übersicht komplette Wohnung" />
+	<a href={grosse_wohnung_header}
+		><img src={grosse_wohnung_header} alt="Übersicht komplette Wohnung" />
 	</a>
-	<ImageGrid images={grosse_wohnung} />
+	<ImageGrid images={grosse_wohnung} gallery_id="grosse_wohnung" />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -179,10 +216,10 @@
 
 <section id="bieberhöhle">
 	<h3>Bieberhöhle (35 m<sup>2</sup>)</h3>
-	<a href="/Kl_W_Schlafzimmer2.webp">
-		<img class="test" src="/Kl_W_Schlafzimmer2.webp" alt="Übersicht komplette Wohnung" />
+	<a href={kleine_wohnung_header}>
+		<img class="test" src={kleine_wohnung_header} alt="Übersicht komplette Wohnung" />
 	</a>
-	<ImageGrid images={kleine_wohnung} />
+	<ImageGrid images={kleine_wohnung} gallery_id="kleine_wohnung" />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -246,5 +283,17 @@
 	img {
 		width: 100%;
 		border-radius: 0.5em;
+	}
+
+	.info {
+		background-color: var(--bieber);
+		color: white;
+		padding: 2rem;
+		padding-left: 10rem;
+		padding-right: 10rem;
+	}
+
+	.info a {
+		color: white;
 	}
 </style>

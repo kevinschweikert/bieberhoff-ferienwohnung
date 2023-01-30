@@ -1,4 +1,9 @@
-<img src="/Gr_W_gesamt2.webp" class="hero full-width" alt="Frau mit Pferd" />
+<script>
+	import marla from '../images/Marla.webp';
+	import header from '../images/grosse_wohnung/Gr_W_gesamt2.webp';
+</script>
+
+<img src={header} class="hero full-width" alt="Wohnung" />
 
 <h1>Herzlich Willkommen</h1>
 
@@ -19,7 +24,7 @@
 	z.B. mit Kickern oder Tischtennisspielen vertreiben. Natürlich dürfen auch unsere Tiere
 	gestreichelt, geputzt und verwöhnt werden:
 </p>
-<img src="/Marla.webp" class="narrow" alt="schlafender Hund" />
+<img src={marla} class="narrow" alt="schlafender Hund" />
 <p>
 	Das sind neben unserer Labradoodle-Hündin Marla unsere 3 Kaninchen, 6 Hühner, 2 Kater (Emil und
 	Wotan), 2 Schafe (Billy und Bob) und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy.

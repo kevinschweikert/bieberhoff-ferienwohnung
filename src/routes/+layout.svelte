@@ -1,5 +1,6 @@
 <script context="module">
 	import Nav from '$lib/Nav.svelte';
+	import 'photoswipe/style.css';
 </script>
 
 <div class="main">
