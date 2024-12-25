@@ -1,48 +1,35 @@
 <script>
-	import { onMount } from 'svelte';
-	import PhotoSwipeLightbox from 'photoswipe/lightbox';
-	export let gallery_id;
-	export let images = [];
+import { Splide, SplideSlide } from "@splidejs/svelte-splide";
+let { gallery_id, images, title } = $props();
 
-	onMount(() => {
-		let lightbox = new PhotoSwipeLightbox({
-			gallery: '#' + gallery_id,
-			children: 'a',
-			pswpModule: () => import('photoswipe')
-		});
-		lightbox.init();
-	});
+const processedImages = Array.isArray(images)
+	? images
+	: typeof images === "string"
+		? [{ path: gallery_id, module: { default: images } }]
+		: Object.entries(images).map(([path, module]) => ({ path, module }));
 </script>
 
-<div class="pswp-gallery" id={gallery_id}>
-	{#each images as image}
-		<a
-			href={image.src}
-			data-pswp-width={image.width}
-			data-pswp-height={image.height}
-			data-cropped="true"
-			target="_blank"
-			rel="noreferrer"
-		>
-			<img loading="lazy" src={image.thumbnail} alt="" />
-		</a>
+<Splide options={{ type: 'loop', lazyLoad: true }}>
+	{#if title}
+		<SplideSlide>
+			<enhanced:img
+				class="object-cover aspect-square rounded-md"
+				src={title}
+				alt=""
+			/>
+		</SplideSlide>
+	{/if}
+	{#each processedImages as { path, module }}
+		<SplideSlide>
+			<!-- svelte-ignore a11y_consider_explicit_label -->
+			<a href={module.default.img.src}>
+				<enhanced:img
+					loading="lazy"
+					class="object-cover aspect-square rounded-md"
+					src={module.default}
+					alt=""
+				/>
+			</a>
+		</SplideSlide>
 	{/each}
-</div>
-
-<style>
-	div {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap: 0.25rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	img {
-		width: 100%;
-		height: 100%;
-		aspect-ratio: 1;
-		object-fit: cover;
-		border-radius: 0.5em;
-	}
-</style>
+</Splide>

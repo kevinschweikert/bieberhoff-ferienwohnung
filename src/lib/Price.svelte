@@ -1,10 +1,10 @@
 <script>
-	export let name = '';
-	export let price = 0;
-	export let size = 0;
-	export let persons = '';
-	export let new_price = false;
-	export let new_price_from = '';
+export let name = "";
+export let price = 0;
+export let size = 0;
+export let persons = "";
+export let new_price = false;
+export let new_price_from = "";
 </script>
 
 <div class="container">

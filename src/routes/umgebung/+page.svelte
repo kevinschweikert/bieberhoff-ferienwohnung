@@ -1,11 +1,11 @@
 <script>
-	import bieberhoff from '../../images/bieberhoff.webp';
+import bieberhoff from "$lib/images/bieberhoff.webp?enhanced";
 </script>
 
 <svelte:head>
 	<title>Umgebung</title>
 </svelte:head>
-<img src={bieberhoff} alt="Bieberhoff Schild" class="full-width hero" />
+<enhanced:img src={bieberhoff} alt="Bieberhoff Schild" class="full-width hero" />
 
 <h1>Umgebung und Freizeitmöglichkeiten</h1>
 

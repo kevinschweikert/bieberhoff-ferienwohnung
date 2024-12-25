@@ -1,9 +1,9 @@
 <script>
-	import Error from '$lib/Error.svelte';
-	import Success from '$lib/Success.svelte';
+import Error from "$lib/Error.svelte";
+import Success from "$lib/Success.svelte";
 
-	/** @type {import('./$types').ActionData} */
-	export let form;
+/** @type {import('./$types').ActionData} */
+export let form;
 </script>
 
 <svelte:head>
@@ -81,7 +81,7 @@
 				required
 			/>
 
-			<div>
+			<div class="flex items-center gap-2">
 				<input type="checkbox" id="only" name="only" value="Ja" checked={form?.allein == 'Ja'} />
 				<label for="only"
 					>Ich möchte, dass während meines Aufenthaltes die andere Wohnung nicht belegt ist</label
@@ -95,7 +95,7 @@
 			<input type="date" name="ende" id="ende" value={form?.ende ?? ''} required />
 
 			<label for="kommentar">Kommentar</label>
-			<textarea rows="5" name="kommentar" id="kommentar" value={form?.kommentar ?? ''} />
+			<textarea rows="5" name="kommentar" id="kommentar" value={form?.kommentar ?? ''}></textarea>
 
 			<input type="submit" value="Anfrage senden" />
 		</form>

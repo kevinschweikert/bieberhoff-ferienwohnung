@@ -1,83 +1,47 @@
 <script context="module">
-	import ImageGrid from '$lib/ImageGrid.svelte';
+import ImageGrid from "$lib/ImageGrid.svelte";
 
-	import header from '../../../src/images/Begrüßung.webp';
-	import ganze_wohnung_header from '../../../src/images/grosse_wohnung/Gr_W_gesamt2.webp';
-	import grosse_wohnung_header from '../../../src/images/grosse_wohnung/Gr_W_gesamt.webp';
-	import kleine_wohnung_header from '../../../src/images/kleine_wohnung/Kl_W_Schlafzimmer2.webp';
+import header from "$lib/images/Begrüßung.webp?enhanced";
+import ganze_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
+import grosse_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt.webp?enhanced";
+import kleine_wohnung_header from "$lib/images/kleine_wohnung/Kl_W_Schlafzimmer2.webp?enhanced";
 
-	const ganze_wohnung_import = import.meta.glob(
-		'../../images/{grosse_wohnung,kleine_wohnung}/*.webp',
-		{
-			query: {
-				width: '300;1200',
-				picture: '',
-				flatten: '',
-				meta: true
-			},
-			import: 'default',
-			eager: true
-		}
-	);
-	const grosse_wohnung_import = import.meta.glob('../../images/grosse_wohnung/*.webp', {
+const all_images = import.meta.glob(
+	"$lib/images/{grosse_wohnung,kleine_wohnung}/*.webp",
+	{
 		query: {
-			width: '300;1200',
-			picture: '',
-			flatten: '',
-			meta: true
+			enhanced: true,
 		},
-		import: 'default',
-		eager: true
-	});
-	const kleine_wohnung_import = import.meta.glob('../../images/kleine_wohnung/*.webp', {
+		eager: true,
+	},
+);
+const big_house_images = import.meta.glob("$lib/images/grosse_wohnung/*.webp", {
+	query: {
+		enhanced: true,
+	},
+	eager: true,
+});
+const small_house_images = import.meta.glob(
+	"$lib/images/kleine_wohnung/*.webp",
+	{
 		query: {
-			width: '300;1200',
-			picture: '',
-			flatten: '',
-			meta: true
+			enhanced: true,
 		},
-		import: 'default',
-		eager: true
-	});
-
-	let ganze_wohnung = [];
-	let grosse_wohnung = [];
-	let kleine_wohnung = [];
-
-	for (const path in ganze_wohnung_import) {
-		let image = ganze_wohnung_import[path];
-		ganze_wohnung.push({
-			width: image.fallback.w,
-			height: image.fallback.h,
-			src: image.sources.webp[1].src,
-			thumbnail: image.sources.webp[0].src
-		});
-	}
-	for (const path in grosse_wohnung_import) {
-		let image = grosse_wohnung_import[path];
-		grosse_wohnung.push({
-			width: image.fallback.w,
-			height: image.fallback.h,
-			src: image.sources.webp[1].src,
-			thumbnail: image.sources.webp[0].src
-		});
-	}
-	for (const path in kleine_wohnung_import) {
-		let image = kleine_wohnung_import[path];
-		kleine_wohnung.push({
-			width: image.fallback.w,
-			height: image.fallback.h,
-			src: image.sources.webp[1].src,
-			thumbnail: image.sources.webp[0].src
-		});
-	}
+		eager: true,
+	},
+);
 </script>
 
 <svelte:head>
 	<title>Wohnungen</title>
 </svelte:head>
 
-<img class="hero full-width" style="width: 100vw" src={header} alt="Übersicht komplette Wohnung" />
+<enhaced:img
+	class="hero full-width"
+	style="width: 100vw"
+	src={header}
+	alt="Übersicht komplette Wohnung"
+/>
 <h1>Wohnungsoptionen</h1>
 
 <section id="bieberburg">
@@ -87,11 +51,7 @@
 		selbstverständlich mit allem ausgestattet, was man für einen bequemen und erholsamen Urlaub
 		braucht und zum großen Teil barrierefrei und rollstuhlgerecht.
 	</p>
-
-	<a href={ganze_wohnung_header}
-		><img src={ganze_wohnung_header} alt="Übersicht komplette Wohnung" />
-	</a>
-	<ImageGrid images={ganze_wohnung} gallery_id="ganze_wohnung" />
+	<ImageGrid images={all_images} title={ganze_wohnung_header} gallery_id="ganze_wohnung" />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -166,10 +126,7 @@
 
 <section id="bieberbau">
 	<h3>Bieberbau (55 m<sup>2</sup>)</h3>
-	<a href={grosse_wohnung_header}
-		><img src={grosse_wohnung_header} alt="Übersicht komplette Wohnung" />
-	</a>
-	<ImageGrid images={grosse_wohnung} gallery_id="grosse_wohnung" />
+	<ImageGrid images={big_house_images} title={grosse_wohnung_header} gallery_id="grosse_wohnung" />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -216,10 +173,11 @@
 
 <section id="bieberhöhle">
 	<h3>Bieberhöhle (35 m<sup>2</sup>)</h3>
-	<a href={kleine_wohnung_header}>
-		<img class="test" src={kleine_wohnung_header} alt="Übersicht komplette Wohnung" />
-	</a>
-	<ImageGrid images={kleine_wohnung} gallery_id="kleine_wohnung" />
+	<ImageGrid
+		images={small_house_images}
+		title={kleine_wohnung_header}
+		gallery_id="kleine_wohnung"
+	/>
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>

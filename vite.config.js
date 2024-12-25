@@ -1,9 +1,7 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import { imagetools } from 'vite-imagetools'
+import { sveltekit } from "@sveltejs/kit/vite";
+import { enhancedImages } from "@sveltejs/enhanced-img";
+import { defineConfig } from "vite";
 
-/** @type {import('vite').UserConfig} */
-const config = {
-    plugins: [sveltekit(), imagetools()]
-};
-
-export default config;
+export default defineConfig({
+	plugins: [enhancedImages(), sveltekit()],
+});

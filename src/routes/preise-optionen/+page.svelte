@@ -1,6 +1,6 @@
 <script context="module">
-	import Price from '$lib/Price.svelte';
-	import angebote from '../../images/auf_pferd.webp';
+import Price from "$lib/Price.svelte";
+import angebote from "$lib/images/auf_pferd.webp?enhanced";
 </script>
 
 <script>
@@ -45,7 +45,7 @@
 </ul>
 
 <h2>Betreute Angebote mit unseren Pferden:</h2>
-<img src={angebote} alt="Menschen auf Pferd" id="down" class="narrow" />
+<enhanced:img src={angebote} alt="Menschen auf Pferd" id="down" class="narrow" />
 <ul>
 	<li>
 		Wir bieten auf unserem Hof Reittherapie und pferdegestützte Trauma- und Erlebnispädagogik an

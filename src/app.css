@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@import '@splidejs/svelte-splide/css';
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+
+@theme {
+	--font-sans: "Roboto Slab Variable", sans-serif;
+	--font-serif: "Courgette", serif;
+	--color-bieber: #6e6ece;
+	--color-accent: #e2ba34;
+}
+
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	input,
+  textarea {
+    @apply border-1 p-1
+
+  }
+
+	:root {
+		--bieber: #6e6ece;
+		--akzent: #e2ba34;
+		--md: 768px;
+	}
+
+	html,
+	body {
+		@apply p-0 m-0 box-border font-sans leading-8 w-screen h-screen max-w-full overflow-x-hidden;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@apply font-serif text-bieber
+	}
+
+	h1 {
+		@apply text-4xl my-5;
+	}
+
+	h2 {
+		@apply text-2xl my-4;
+	}
+
+	h3 {
+		@apply text-xl my-3;
+	}
+
+	p {
+		@apply m-4
+	}
+}
+
+ul {
+	list-style-type: disc;
+	padding: 1rem;
+}
+
+.main {
+	margin-top: 0;
+	min-height: 100vh;
+}
+
+.content {
+	margin: 0 auto;
+	padding: 1.25rem;
+	width: 100vw;
+	box-sizing: border-box;
+	flex-grow: 1;
+}
+
+.hero {
+	width: 100vw !important;
+	height: 200px;
+	margin-top: -1.25rem;
+}
+
+.full-width {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+	object-fit: cover;
+}
+
+.narrow {
+	height: 20rem;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0.5em;
+}
+
+@media (min-width: 768px) {
+	.content {
+		width: 800px;
+	}
+
+	.hero {
+		height: 300px;
+	}
+}

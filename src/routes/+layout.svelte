@@ -1,62 +1,41 @@
-<script context="module">
-	import Nav from '$lib/Nav.svelte';
-	import 'photoswipe/style.css';
+<script>
+import Menuitem from "$lib/Menuitem.svelte";
+import Link from "$lib/Link.svelte";
+import "../app.css";
+
+import "@fontsource-variable/roboto-slab";
+import "@fontsource/courgette";
+
+const routes = [
+	{ path: "/", name: "Startseite" },
+	{ path: "/wohnungen", name: "Wohnungsoptionen" },
+	{ path: "/preise-optionen", name: "Preise und Optionen" },
+	{ path: "/umgebung", name: "Umgebung und Freizeit" },
+	{ path: "/fotos", name: "Fotos" },
+	{ path: "/kontakt", name: "Kontakt" },
+	{ path: "https://bieberhoff.de", name: "Reittherapie" },
+];
 </script>
 
-<div class="main">
-	<header>
-		<a href="/" class="logo"><img src="/logo_white_text.webp" alt="Bieberhoff Logo" /></a>
-		<Nav />
+<div class="flex flex-col h-screen">
+	<header class="flex md:flex-row flex-col items-center md:p-5 md:justify-between p-4 bg-bieber">
+		<a href="/" class="shrink-0"
+			><img src="/logo_white_text.webp" alt="Bieberhoff Logo" class="h-28" /></a
+		>
+		<nav class="flex flex-row gap-2 flex-wrap items-center p-2 md:justify-end">
+			{#each routes as route}
+				<Menuitem path={route.path}>{route.name}</Menuitem>
+			{/each}
+		</nav>
 	</header>
 
-	<div class="content">
+	<div class="content flex-1">
 		<slot />
 	</div>
 
-	<footer>
-		<a class="menuitem" href="/kontakt">Kontakt</a>
-		<a class="menuitem" href="/datenschutz">Datenschutz</a>
-		<a class="menuitem" href="/impressum">Impressum</a>
+	<footer class="flex flex-row items-center justify-between p-4 bg-bieber">
+		<Link path="/kontakt">Kontakt</Link>
+		<Link path="/datenschutz">Datenschutz</Link>
+		<Link path="/impressum">Impressum</Link>
 	</footer>
 </div>
-
-<style>
-	.main {
-		display: flex;
-		flex-direction: column;
-	}
-
-	header {
-		display: flex;
-		background-color: var(--bieber);
-		width: 100%;
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem;
-	}
-
-	@media (min-width: 768px) {
-		header {
-			flex-direction: row;
-			padding: 1.25rem;
-			justify-content: space-between;
-		}
-	}
-
-	.logo {
-		flex-shrink: 0;
-	}
-
-	img {
-		height: 7rem;
-	}
-
-	footer {
-		background-color: var(--bieber);
-		padding: 2rem;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-	}
-</style>
