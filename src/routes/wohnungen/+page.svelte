@@ -1,6 +1,7 @@
 <script>
 	import ImageGrid from "$lib/ImageGrid.svelte";
 	import HeroImage from "$lib/HeroImage.svelte";
+	import Banner from "$lib/Banner.svelte";
 
 	import header from "$lib/images/Begrüßung.webp?enhanced";
 	import ganze_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
@@ -42,6 +43,13 @@
 
 <HeroImage src={header} alt="Übersicht komplette Wohnung" />
 <h1>Wohnungsoptionen</h1>
+
+<Banner title="Hinweis">
+	<p class="text-white">
+		Eigene Haustiere können aus Rücksicht auf unsere Tiere leider nicht
+		mitgebracht werden
+	</p>
+</Banner>
 
 <section id="bieberburg">
 	<h3>Bieberburg (90 m<sup>2</sup>)</h3>
@@ -94,7 +102,6 @@
 		<li>Zusätzliches Kinderbett möglich</li>
 		<li>Spiele-Kiste für Kinder</li>
 		<li>1. Hilfe-Set</li>
-		<li>Haustier (Hund) nach Absprache u.U. möglich</li>
 		<li>Waschmaschinen- und Trocknernutzung möglich</li>
 	</ul>
 
@@ -104,16 +111,15 @@
 		<li>Kühlschrank (mit Eisfach)</li>
 		<li>Spülmaschine</li>
 		<li>Mikrowelle</li>
-		<li>Kaffeemaschine, Wasserkocher</li>
+		<li>Kaffeemaschine</li>
+		<li>Wasserkocher</li>
 		<li>Toaster</li>
 		<li>Radio</li>
 		<li>Staubsauger</li>
 		<li>Hochstuhl möglich</li>
 	</ul>
 </section>
-<div class="bg-bieber text-white w-screen flex flex-col items-center">
-	<h3 class="text-white">Tipp</h3>
-
+<Banner title="Tipp">
 	<p class="text-white">
 		Die Wohnung ist flexibel nutzbar, weil sie sich bei Bedarf auch in zwei (<a
 			class="text-white underline"
@@ -133,7 +139,7 @@
 		Die Wohnungen liegen Wand an Wand, insofern gibt es natürlich keinen
 		kompletten Schallschutz.
 	</p>
-</div>
+</Banner>
 
 <p>Aufgeteilt sind die beiden Wohnhälften folgendermaßen ausgestattet:</p>
 
@@ -175,18 +181,18 @@
 		<li>Zusätzliches Kinderbett möglich</li>
 		<li>Spiele-Kiste für Kinder</li>
 		<li>1. Hilfe-Set</li>
-		<li>Haustier nach Absprache u.U. möglich</li>
 		<li>Waschmaschinen- und Trocknernutzung möglich</li>
 	</ul>
 
 	<h3>Küche</h3>
 	<ul>
 		<li>Herd mit Backofen</li>
-		<li>Kühlschrank (ohne Eisfach)</li>
+		<li>Kühlschrank mit Eisfach</li>
 		<li>kleiner Eisschrank</li>
 		<li>Spülmaschine</li>
 		<li>Mikrowelle</li>
-		<li>Kaffeemaschine, Wasserkocher</li>
+		<li>Kaffeemaschine</li>
+		<li>Wasserkocher</li>
 		<li>Toaster</li>
 		<li>Radio</li>
 		<li>Staubsauger</li>
@@ -228,17 +234,17 @@
 		<li>Fußbodenheizung</li>
 		<li>Zusätzliches Kinderbett möglich</li>
 		<li>1. Hilfe-Set</li>
-		<li>Haustier nach Absprache u.U. möglich</li>
 		<li>Waschmaschinen- und Trocknernutzung möglich</li>
 	</ul>
 
 	<h3>Küche (ohne Wasseranschluss)</h3>
 	<ul>
 		<li>Doppelkochplatte</li>
-		<li>Tischgeschirrspüler (ohne Wasseranschluss nutzbar)</li>
+		<li>Tischgeschirrspüler (ohne Wasseranschluss nutzbar, auf Anfrage)</li>
 		<li>Kühlschrank mit Eisfach</li>
-		<li>Mikrowelle</li>
-		<li>Kaffeemaschine, Wasserkocher</li>
+		<li>Mikrowelle (auf Anfrage)</li>
+		<li>Kaffeemaschine (auf Anfrage)</li>
+		<li>Wasserkocher</li>
 		<li>Toaster</li>
 		<li>Hochstuhl möglich</li>
 	</ul>
