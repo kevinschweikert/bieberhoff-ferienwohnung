@@ -1,9 +1,11 @@
 <script>
 import marla from "$lib/images/Marla.webp?enhanced";
 import header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
+import HeroImage from "$lib/HeroImage.svelte";
+import Image from "$lib/Image.svelte";
 </script>
 
-<enhanced:img src={header} class="hero full-width" alt="Wohnung" />
+<HeroImage src={header} alt="Wohnung" />
 
 <h1>Herzlich Willkommen</h1>
 
@@ -24,7 +26,7 @@ import header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
 	z.B. mit Kickern oder Tischtennisspielen vertreiben. Natürlich dürfen auch unsere Tiere
 	gestreichelt, geputzt und verwöhnt werden:
 </p>
-<enhanced:img src={marla} class="narrow" alt="schlafender Hund" />
+<Image src={marla} alt="schlafender Hund" />
 <p>
 	Das sind neben unserer Labradoodle-Hündin Marla unsere 3 Kaninchen, 6 Hühner, 2 Kater (Emil und
 	Wotan), 2 Schafe (Billy und Bob) und natürlich unsere 5 Pferde: Wilou, Fine, Lotta, Frodo und Amy.

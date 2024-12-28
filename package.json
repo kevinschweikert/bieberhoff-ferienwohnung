@@ -14,6 +14,7 @@
 		"@sveltejs/enhanced-img": "^0.4.4",
 		"@sveltejs/kit": "^2.15.0",
 		"@tailwindcss/postcss": "^4.0.0-beta.4",
+		"@tailwindcss/typography": "^0.5.15",
 		"postcss": "^8.4.49",
 		"svelte": "^5.16.0",
 		"tailwindcss": "^4.0.0-beta.4",
