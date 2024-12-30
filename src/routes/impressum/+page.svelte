@@ -2,12 +2,16 @@
 	<title>Impressum</title>
 </svelte:head>
 
-<h1>Impressum</h1>
-<section>
+{#snippet emphasize(text)}
+	<span class="font-bold text-bieber">{text}</span> <br />
+{/snippet}
+
+<section class="flex flex-col px-4">
+	<h1>Impressum</h1>
 	<h2>Angaben gemäß §5 TMG</h2>
 
 	<p>
-		<span> Anschrift</span> <br />
+		{@render emphasize("Anschrift")}
 		Matthias Bieber <br />
 		Blockhauser Weg 6 <br />
 		26605 Aurich
@@ -20,13 +24,13 @@
 	</p>
 
 	<p>
-		<span> Kontakt</span> <br />
+		{@render emphasize("Kontakt")}
 		Telefon: 04941/9238414 <br />
-		E-Mail: info@bieberhoff.de
+		E-Mail: <a href="mailto:info@bieberhoff.de">info@bieberhoff.de</a>
 	</p>
 
 	<p>
-		<span>Fotos</span> <br />
+		{@render emphasize("Fotos")}
 		Birgit Cullmann <br />
 		Osterfeldstraße 3 <br />
 		26605 Aurich <br />
@@ -36,24 +40,12 @@
 	</p>
 
 	<p>
-		<span>Logo</span><br />
+		{@render emphasize("Logo")}
 		Andrea Rudolph
 	</p>
 
 	<p>
-		<span>Website</span><br />
+		{@render emphasize("Website")}
 		Kevin Schweikert
 	</p>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-	}
-
-	span {
-		font-weight: bold;
-		color: var(--bieber);
-	}
-</style>

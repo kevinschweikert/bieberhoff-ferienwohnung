@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@import "@splidejs/svelte-splide/css";
+
+@plugin "@tailwindcss/typography";
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+
+@theme {
+	--font-sans: "Roboto Slab Variable", sans-serif;
+	--font-serif: "Courgette", serif;
+	--color-bieber: #6e6ece;
+	--color-accent: #e2ba34;
+}
+
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	input,
+  textarea {
+    @apply border-1 p-1 border-bieber border-1 min-h-4 rounded-sm
+  }
+
+	html,
+	body {
+		@apply p-0 m-0 box-border font-sans leading-8 w-screen h-screen max-w-full overflow-x-hidden;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@apply font-serif text-bieber px-4;
+	}
+
+	h1 {
+		@apply text-4xl my-5;
+	}
+
+	h2 {
+		@apply text-2xl my-4;
+	}
+
+	h3 {
+		@apply text-xl my-3; 
+	}
+
+	p {
+		@apply prose m-4;
+	}
+
+	ul {
+		@apply list-disc p-4 prose;
+	}
+}
+

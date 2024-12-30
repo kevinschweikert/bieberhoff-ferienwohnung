@@ -1,66 +1,28 @@
 <script>
-	export let name = '';
-	export let price = 0;
-	export let size = 0;
-	export let persons = '';
-	export let new_price = false;
-	export let new_price_from = '';
+	let {
+		name = "",
+		price = 0,
+		size = 0,
+		persons = "",
+		new_price = false,
+		new_price_from = "",
+	} = $props();
 </script>
 
-<div class="container">
-	<a href="/wohnungen#{name.toLowerCase()}"><h2>{name}</h2></a>
-	<div class="tabelle">
-		<div class="facts">
+<div class="bg-bieber p-4 rounded-md text-white flex flex-col gap-3 my-2">
+	<a href="/wohnungen#{name.toLowerCase()}"
+		><h2 class="text-white">{name}</h2></a
+	>
+	<div class="flex flex-row flex-wrap justify-between gap-6">
+		<div class="flex flex-col">
 			<span>{size} m²</span>
 			<span>für {persons} Personen</span>
 		</div>
 		<div>
-			<div class="price">{price} €/Nacht</div>
+			<div class="text-3xl">{price} €/Nacht</div>
 			{#if new_price}
 				<div>ab {new_price_from} - {new_price} €/Nacht</div>
 			{/if}
 		</div>
 	</div>
 </div>
-
-<style>
-	.container {
-		background-color: var(--bieber);
-		padding: 1em;
-		margin: 0.5rem 0;
-		border-radius: 0.5em;
-		color: white;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-
-	.price {
-		font-size: 2rem;
-	}
-
-	.facts {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.tabelle {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 0.75rem;
-	}
-
-	h2 {
-		color: white;
-		padding: 0;
-		margin: 0;
-		font-weight: 200;
-		font-family: 'Roboto Slab', sans-serif;
-	}
-
-	a {
-		text-decoration: none;
-	}
-</style>
