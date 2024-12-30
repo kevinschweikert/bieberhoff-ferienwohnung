@@ -1,7 +1,6 @@
 <script>
-	/** @type {import('./$types').ActionData} */
-	export let form;
-	$: console.log(form);
+/** @type {import('./$types').ActionData} */
+export let form;
 </script>
 
 <svelte:head>
