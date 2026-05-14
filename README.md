@@ -1,38 +1,24 @@
-# create-svelte
+# Bieberhoff Ferienwohnung
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Website für die Ferienwohnungen Bieberhoff in Aurich. SvelteKit + Tailwind, deployed auf Vercel.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Entwicklung
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+pnpm install
+pnpm dev
 ```
 
-> Note: the `@next` is temporary
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Build
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm build
+pnpm preview
 ```
 
-## Building
+## Environment
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+Für das Kontaktformular werden zwei Variablen benötigt (lokal in `.env`, in Vercel als Project Environment Variables):
 
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm start`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+- `SENDGRID_API_KEY`
+- `SENDGRID_TEMPLATE_ID`

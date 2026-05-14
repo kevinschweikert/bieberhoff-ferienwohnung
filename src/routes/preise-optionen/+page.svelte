@@ -1,39 +1,36 @@
 <script>
-	import Price from "$lib/Price.svelte";
-	import Image from "$lib/Image.svelte";
-	import Banner from "$lib/Banner.svelte";
-	import emma_on_horse from "$lib/images/auf_pferd.webp?enhanced";
+import Banner from "$lib/Banner.svelte";
+import Image from "$lib/Image.svelte";
+import Price from "$lib/Price.svelte";
+import emma_on_horse from "$lib/images/auf_pferd.webp?enhanced";
 
-	const bieberburg = {
-		price: 130,
-		size: 90,
-		persons: "4-6",
-		name: "Bieberburg",
-	};
-	const bieberbau = {
-		price: 85,
-		size: 55,
-		persons: "2-3",
-		name: "Bieberbau",
-	};
-	const bieberhöhle = {
-		price: 50,
-		size: 35,
-		persons: "2-3",
-		name: "Bieberhöhle",
-	};
+const bieberburg = {
+	price: 130,
+	size: 90,
+	persons: "4-6",
+	name: "Bieberburg",
+};
+const bieberbau = {
+	price: 85,
+	size: 55,
+	persons: "2-3",
+	name: "Bieberbau",
+};
+const bieberhöhle = {
+	price: 50,
+	size: 35,
+	persons: "2-3",
+	name: "Bieberhöhle",
+};
 </script>
 
-<svelte:head>
-	<title>Preise + Optionen</title>
-</svelte:head>
 
 <h1>Preise und Mietoptionen</h1>
 
 <Price {...bieberburg} />
 <h2>Bei Nutzung als 2 seperate Wohnbereiche</h2>
 <Banner title="Information">
-	<p class="text-white">
+	<p>
 		Die Buchung der einzelnen Wohnungen ist nur außerhalb der Ferien, Feier- und
 		Brückentage möglich
 	</p>
@@ -50,7 +47,7 @@
 </ul>
 
 <Banner title="Hinweis">
-	<p class="text-white">
+	<p>
 		Eigene Haustiere können aus Rücksicht auf unsere Tiere leider nicht
 		mitgebracht werden
 	</p>

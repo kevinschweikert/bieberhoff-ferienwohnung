@@ -1,8 +1,8 @@
 <script>
-import marla from "$lib/images/Marla.webp?enhanced";
-import header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
 import HeroImage from "$lib/HeroImage.svelte";
 import Image from "$lib/Image.svelte";
+import header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
+import marla from "$lib/images/Marla.webp?enhanced";
 </script>
 
 <HeroImage src={header} alt="Wohnung" />

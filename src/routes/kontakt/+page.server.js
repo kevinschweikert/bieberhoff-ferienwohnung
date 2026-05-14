@@ -1,9 +1,28 @@
+import { env } from "$env/dynamic/private";
 import { fail } from "@sveltejs/kit";
+
+const OWNER = {
+	email: "info@bieberhoff.de",
+	name: "Ferienwohnungen Bieberhoff",
+};
+
+const dateOptions = {
+	weekday: "long",
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+};
 
 /** @type {import('./$types').Actions} */
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
+
+		// Honeypot — bots fill hidden fields, real users don't.
+		// Pretend success so scrapers don't iterate.
+		if (data.get("website")) {
+			return { success: true };
+		}
 
 		const vorname = data.get("vorname");
 		const nachname = data.get("nachname");
@@ -15,70 +34,45 @@ export const actions = {
 		const ende = data.get("ende");
 		const kommentar = data.get("kommentar");
 
-		const options = {
-			weekday: "long",
-			year: "numeric",
-			month: "long",
-			day: "numeric",
-		};
-
-		const von = new Date(start);
-		const bis = new Date(ende);
-
-		const only = allein !== "Ja" ? "Nein" : allein;
+		const von = new Date(start).toLocaleDateString("de-DE", dateOptions);
+		const bis = new Date(ende).toLocaleDateString("de-DE", dateOptions);
+		const only = allein === "Ja" ? "Ja" : "Nein";
 
 		const mail = {
-			from: {
-				email: "info@bieberhoff.de",
-				name: "Ferienwohnungen Bieberhoff",
-			},
+			from: OWNER,
+			reply_to: { email: mail_address, name: `${vorname} ${nachname}` },
 			personalizations: [
 				{
-					to: [
-						{
-							email: mail_address,
-							name: `${vorname} ${nachname}`,
-						},
-					],
-					bcc: [
-						{
-							email: "info@bieberhoff.de",
-							name: "Ferienwohnungen Bieberhoff",
-						},
-					],
-					subject: "Buchungsanfrage - Ferienwohnungen Bieberhoff",
+					to: [OWNER],
+					subject: `Buchungsanfrage von ${vorname} ${nachname}`,
 					dynamic_template_data: {
-						vorname: vorname,
-						nachname: nachname,
-						start: von.toLocaleDateString("de-DE", options),
-						ende: bis.toLocaleDateString("de-DE", options),
-						only: only,
-						kommentar: kommentar,
-						wohnung: wohnung,
-						anzahl: anzahl,
+						vorname,
+						nachname,
+						mail: mail_address,
+						start: von,
+						ende: bis,
+						only,
+						kommentar,
+						wohnung,
+						anzahl,
 					},
 				},
 			],
-			template_id: `${import.meta.env.VITE_SENDGRID_TEMPLATE_ID}`,
+			template_id: env.SENDGRID_TEMPLATE_ID,
 		};
 
 		const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
-			method: "POST", // *GET, POST, PUT, DELETE, etc.
-			mode: "cors", // no-cors, *cors, same-origin
-			cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				Authorization: `Bearer ${import.meta.env.VITE_SENDGRID_API_KEY}`,
+				Authorization: `Bearer ${env.SENDGRID_API_KEY}`,
 			},
-			redirect: "follow", // manual, *follow, error
-			referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-			body: JSON.stringify(mail), // body data type must match "Content-Type" header
+			body: JSON.stringify(mail),
 		});
 
-		if (response.status != 202) {
-			response.errors.forEach((error) => {
-				console.debug(error);
-			});
+		if (response.status !== 202) {
+			const body = await response.text();
+			console.error("SendGrid error", response.status, body);
 			return fail(500, {
 				vorname,
 				nachname,
@@ -93,6 +87,6 @@ export const actions = {
 			});
 		}
 
-		return { success: true, mail_address };
+		return { success: true };
 	},
 };

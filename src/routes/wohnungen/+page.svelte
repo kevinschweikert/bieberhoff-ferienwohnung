@@ -1,51 +1,45 @@
 <script>
-	import ImageGrid from "$lib/ImageGrid.svelte";
-	import HeroImage from "$lib/HeroImage.svelte";
-	import Banner from "$lib/Banner.svelte";
+import Banner from "$lib/Banner.svelte";
+import Carousel from "$lib/Carousel.svelte";
+import HeroImage from "$lib/HeroImage.svelte";
 
-	import header from "$lib/images/Begrüßung.webp?enhanced";
-	import ganze_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
-	import grosse_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt.webp?enhanced";
-	import kleine_wohnung_header from "$lib/images/kleine_wohnung/Kl_W_Schlafzimmer2.webp?enhanced";
+import header from "$lib/images/Begrüßung.webp?enhanced";
+import ganze_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt2.webp?enhanced";
+import grosse_wohnung_header from "$lib/images/grosse_wohnung/Gr_W_gesamt.webp?enhanced";
+import kleine_wohnung_header from "$lib/images/kleine_wohnung/Kl_W_Schlafzimmer2.webp?enhanced";
 
-	const all_images = import.meta.glob(
-		"$lib/images/{grosse_wohnung,kleine_wohnung}/*.webp",
-		{
-			query: {
-				enhanced: true,
-			},
-			eager: true,
+const all_images = import.meta.glob(
+	"$lib/images/{grosse_wohnung,kleine_wohnung}/*.webp",
+	{
+		query: {
+			enhanced: true,
 		},
-	);
-	const big_house_images = import.meta.glob(
-		"$lib/images/grosse_wohnung/*.webp",
-		{
-			query: {
-				enhanced: true,
-			},
-			eager: true,
+		eager: true,
+	},
+);
+const big_house_images = import.meta.glob("$lib/images/grosse_wohnung/*.webp", {
+	query: {
+		enhanced: true,
+	},
+	eager: true,
+});
+const small_house_images = import.meta.glob(
+	"$lib/images/kleine_wohnung/*.webp",
+	{
+		query: {
+			enhanced: true,
 		},
-	);
-	const small_house_images = import.meta.glob(
-		"$lib/images/kleine_wohnung/*.webp",
-		{
-			query: {
-				enhanced: true,
-			},
-			eager: true,
-		},
-	);
+		eager: true,
+	},
+);
 </script>
 
-<svelte:head>
-	<title>Wohnungen</title>
-</svelte:head>
 
 <HeroImage src={header} alt="Übersicht komplette Wohnung" />
 <h1>Wohnungsoptionen</h1>
 
 <Banner title="Hinweis">
-	<p class="text-white">
+	<p>
 		Eigene Haustiere können aus Rücksicht auf unsere Tiere leider nicht
 		mitgebracht werden
 	</p>
@@ -59,11 +53,7 @@
 		einen bequemen und erholsamen Urlaub braucht und zum großen Teil
 		barrierefrei und rollstuhlgerecht.
 	</p>
-	<ImageGrid
-		images={all_images}
-		title={ganze_wohnung_header}
-		gallery_id="ganze_wohnung"
-	/>
+	<Carousel images={all_images} title={ganze_wohnung_header} />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -120,22 +110,22 @@
 	</ul>
 </section>
 <Banner title="Tipp">
-	<p class="text-white">
+	<p>
 		Die Wohnung ist flexibel nutzbar, weil sie sich bei Bedarf auch in zwei (<a
-			class="text-white underline"
+			class="underline"
 			href="#bieberbau">Bieberbau</a
 		>
-		und <a class="text-white underline" href="#bieberhöhle">Bieberhöhle</a>), in
-		sich abgeschlossene Bereiche mit jeweils separatem Eingang und eigenem Bad
+		und <a class="underline" href="#bieberhöhle">Bieberhöhle</a>), in sich
+		abgeschlossene Bereiche mit jeweils separatem Eingang und eigenem Bad
 		aufteilen lässt. Daher eignet sie sich gut für Familien mit mehreren
 		Kindern, aber auch z.B. für befreundete Paare oder Kleinfamilien, für
 		mitreisende Großeltern oder erwachsene Kinder.
 	</p>
-	<p class="text-white">
+	<p>
 		So kann man gemeinsam Urlaub machen und ist doch unabhängig. Man kann sich
 		mal zurückziehen und hat seine Privatsphäre.
 	</p>
-	<p class="text-white">
+	<p>
 		Die Wohnungen liegen Wand an Wand, insofern gibt es natürlich keinen
 		kompletten Schallschutz.
 	</p>
@@ -145,11 +135,7 @@
 
 <section id="bieberbau">
 	<h3>Bieberbau (55 m<sup>2</sup>)</h3>
-	<ImageGrid
-		images={big_house_images}
-		title={grosse_wohnung_header}
-		gallery_id="grosse_wohnung"
-	/>
+	<Carousel images={big_house_images} title={grosse_wohnung_header} />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>
@@ -202,11 +188,7 @@
 
 <section id="bieberhöhle">
 	<h3>Bieberhöhle (35 m<sup>2</sup>)</h3>
-	<ImageGrid
-		images={small_house_images}
-		title={kleine_wohnung_header}
-		gallery_id="kleine_wohnung"
-	/>
+	<Carousel images={small_house_images} title={kleine_wohnung_header} />
 	<h3>Ausstattung</h3>
 	<ul>
 		<li>W-Lan</li>

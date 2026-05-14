@@ -1,28 +1,25 @@
 {
 	"name": "bieberhoff-ferienwohnung",
-	"version": "1.02",
+	"version": "1.0.2",
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"format": "biome format --write .",
+		"lint": "biome check ."
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@fontsource/courgette": "^5.1.0",
-		"@splidejs/svelte-splide": "^0.2.9",
-		"@sveltejs/adapter-vercel": "^5.5",
-		"@sveltejs/enhanced-img": "^0.4.4",
-		"@sveltejs/kit": "^2.15.0",
-		"@tailwindcss/postcss": "^4.0.0-beta.4",
-		"@tailwindcss/typography": "^0.5.15",
-		"postcss": "^8.4.49",
-		"svelte": "^5.16.0",
-		"tailwindcss": "^4.0.0-beta.4",
-		"typescript": "^5.7.2",
-		"vite": "^6.0.5"
-	},
-	"type": "module",
-	"dependencies": {
-		"@fontsource-variable/roboto-slab": "^5.1.0"
+		"@biomejs/biome": "2.4.15",
+		"@fontsource-variable/roboto-slab": "^5.2.8",
+		"@fontsource/courgette": "^5.2.7",
+		"@sveltejs/adapter-vercel": "^6.3.3",
+		"@sveltejs/enhanced-img": "^0.10.4",
+		"@sveltejs/kit": "^2.59.1",
+		"@tailwindcss/vite": "^4.3.0",
+		"svelte": "^5.55.5",
+		"tailwindcss": "^4.3.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.12"
 	}
 }

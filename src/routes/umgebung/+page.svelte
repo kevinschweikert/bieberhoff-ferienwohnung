@@ -1,11 +1,8 @@
 <script>
-	import bieberhoff from "$lib/images/bieberhoff.webp?enhanced";
-	import HeroImage from "$lib/HeroImage.svelte";
+import HeroImage from "$lib/HeroImage.svelte";
+import bieberhoff from "$lib/images/bieberhoff.webp?enhanced";
 </script>
 
-<svelte:head>
-	<title>Umgebung</title>
-</svelte:head>
 <HeroImage src={bieberhoff} alt="Bieberhoff Schild" />
 
 <h1>Umgebung und Freizeitmöglichkeiten</h1>

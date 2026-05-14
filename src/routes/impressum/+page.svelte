@@ -1,6 +1,3 @@
-<svelte:head>
-	<title>Impressum</title>
-</svelte:head>
 
 {#snippet emphasize(text)}
 	<span class="font-bold text-bieber">{text}</span> <br />

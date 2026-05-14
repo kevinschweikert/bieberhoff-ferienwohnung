@@ -1,5 +1,17 @@
 <script>
-let { alt, src } = $props();
+let {
+	src,
+	alt = "",
+	loading = "lazy",
+	class:
+		className = "w-full max-w-[800px] h-72 md:h-96 rounded-lg shadow-md my-6 mx-4",
+} = $props();
 </script>
-<enhanced:img {src} class="min-w-prose max-w-[800px] h-80 object-cover rounded-md" {alt} />
 
+<enhanced:img
+	{src}
+	{alt}
+	{loading}
+	draggable="false"
+	class="object-cover {className}"
+/>
